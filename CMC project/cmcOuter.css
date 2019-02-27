@@ -11,19 +11,19 @@ body,html{
     background-color: #333333;
     font-family: 'Nunito Sans', sans-serif;
 }
-.navContainer ul {
+.navContainer .navTextGroup {
 	display: flex;
 }
 
 .footerContainer{
-height: 125px;
+    height: 125px;
     display: flex;
     justify-content: center;
     width: 100%;
     color: white;
     background-color: #333333;
     font-family: 'Nunito Sans', sans-serif;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -253,7 +253,7 @@ margin-right:5px;
     font-family: 'Nunito Sans', sans-serif;
     padding: 100px;
     position: relative;
-    width: 80%;
+    width: calc(80% - 100px);
     max-width: 1200px;
     /* margin: auto; */
     display: inline-block;
@@ -332,6 +332,187 @@ margin-right:5px;
 	height: 150px;
 }
 
+.frequentQuestionsPage{
+	max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.frequentFeatureText{
+	    color: #999999;
+}
+
+.frequentContainer{
+	    padding: 50px;
+}
+
+.bio{
+	    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.bioThumbnail{
+	    margin: 10px;
+    width: 25%;
+    flex-shrink: 1;
+}
+
+.profilePic{
+	width: calc(100% - 20px);
+    height: auto;
+}
+
+.bioDesc{
+	flex-shrink: 1;
+    width: 75%;
+}
+
+.bioName{
+	    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.bioNameDesc{
+	margin-top: 2px;
+	color: #999999;
+}
+
+.bioThumbnail i{
+	color:#016C5B;
+	font-size: 21px;
+}
+
+.bioTwitter, .bioFacebook, .bioInstagram{
+	    color: #999999;
+}
+.memberBio{
+	    font-family: 'Nunito Sans', sans-serif;
+}
+.speakerEvents{
+	width:100%;
+}
+
+.speakerEvents h1 {
+	margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.speakerEvents p {
+    color: #006c3f;
+    margin-top: 0px;
+	}
+
+	.followOn{
+		font-size: 20px;
+		font-weight: 200;
+		margin-top: 10px;
+	}
+
+	.hiddenUpper{
+		display:none;
+	}
+
+@media screen and (max-width:1075px){
+.socialContainer i{
+	font-size:20px;
+	}
+
+	.navContainer .navText{
+		font-size: 13px;
+	}
+
+	.contactBox, .addressBox, .logoBox, .searchBox {
+    max-width: 100%;
+    margin:auto;
+    width: 100%;
+}
+
+.footerSearch{
+	margin:auto;
+}
+
+.footerContainer{
+	flex-wrap: wrap;
+	text-align: center;
+	height:auto;
+}
+.footerContainer p{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.searchBox{
+	margin-bottom: 50px;
+}
+.socialContainer{
+	display:none;
+}
+.navContainer .navTextGroup{
+	display: none;
+}
+}
+
+
+@media screen and (max-width:1024px){
+	.bio{
+		flex-wrap:wrap;
+		padding:25px;
+	}
+
+	.bioName, .bioNameDesc{
+		display: none;
+	}
+
+		.hiddenUpper{
+		display:block;
+		width:100%;
+	}
+
+	.bioThumbnail {
+		    margin: 10px;
+    width: 100%;
+    flex-shrink: 1;
+	}
+
+	.profilePic{
+    float: left;
+    width: 50%;
+    max-width: 300px;
+	}
+
+	.bioSocialBox{
+		margin-left: 20px;
+    /* float: right; */
+    height: 100%;
+    display: inline-block;
+	}
+	.bioDesc{
+		width:100%;
+		float:none;
+	}
+
+	.bioSocialBox{
+		margin-left: 20px;
+    	float:none;
+    	max-width: calc(50% - 20px);
+    	height: 100%;
+    	display: table;
+	}
+	.bioSocialInnerBox{
+		display: table-cell;
+    	vertical-align: middle;
+    	padding-left: 20px;
+    	font-size: 2vw;
+	}
+
+	}
+
+
 @media screen and (max-width:975px){
 	.innerInfoBox{
     margin-left: 0;
@@ -344,6 +525,25 @@ margin-right:5px;
     background-color: #e6e6e6;
 }
 
+@media screen and (max-width: 768px){
+.donationDesc {
+	padding:5px;
+    font-size: 2.5vw;
+}
+
+.donationDescContainer {
+    margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width: 500px){
+.bioThumbnail i {
+    font-size: 14px;
+}
+.followOn{
+	font-size:15px;
+}
+}
 .mainContactInfoBox {
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
@@ -381,4 +581,8 @@ margin-right:5px;
     max-width: 300px;
 }
 
+}
+
+.mainElement{
+	min-height:100vh;
 }
