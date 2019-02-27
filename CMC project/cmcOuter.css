@@ -493,8 +493,11 @@ display:inline-flex;
 	.footerContainer {
 		flex-wrap: wrap;
 		text-align: center;
-		height: auto;
+		height: 390px;
 	}
+	.spacing{
+	padding-bottom: 390px;
+}
 	.footerContainer p {
 		margin-top: 2px;
 		margin-bottom: 2px;
