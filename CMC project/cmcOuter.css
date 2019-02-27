@@ -1,588 +1,641 @@
-body,html{
-	margin:0;
-	padding:0;
+body, html {
+	margin: 0;
+	padding: 0;
+	height:100%;
 }
-
-.navContainer{
-    height: 70px;
-    display: inline-block;
-    width: 100%;
-    color: #999999;
-    background-color: #333333;
-    font-family: 'Nunito Sans', sans-serif;
+.wrapper{
+	min-height: 100%;
+    position: relative;
+}
+.navContainer {
+	height: 70px;
+	display: inline-block;
+	width: 100%;
+	color: #999999;
+	background-color: #333333;
+	font-family: 'Nunito Sans', sans-serif;
 }
 .navContainer .navTextGroup {
 	display: flex;
 }
-
-.footerContainer{
-    height: 125px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    color: white;
-    background-color: #333333;
-    font-family: 'Nunito Sans', sans-serif;
-    position: relative;
-    bottom: 0;
-}
-
-.mainLogo{
+.footerContainer {
+	height: 125px;
 	display: flex;
-    margin: auto;
+	justify-content: center;
+	width: 100%;
+	color: white;
+	background-color: #333333;
+	font-family: 'Nunito Sans', sans-serif;
+	position: absolute;
+	bottom: 0;
 }
-
-.footerLogo{
+.spacing{
+	padding-bottom: 125px;
+}
+.mainElement:last-child{
+	padding-bottom:125px;
+}
+.mainLogo {
 	display: flex;
-    margin: auto;
-    padding-top: 25px;
+	margin: auto;
 }
-
- .tempRule{
- 	    display: flex;
- }
-
-.nav{
-display: inline-flex;
-    height: 100%;
-    width: 100%;
-    justify-content: space-around;
+.footerLogo {
+	display: flex;
+	margin: auto;
+	padding-top: 25px;
 }
-
-.navText{
-    list-style: none;
-    margin: 10px;
-    display: inline-block;
-     cursor:pointer;
+.tempRule {
+	display: flex;
 }
-
-.contactBox, .addressBox, .logoBox, .searchBox{
-	
-    max-width: 200px;
-    margin-right: 35px;
-    margin-left: 35px;
+.nav {
+	display: inline-flex;
+	height: 100%;
+	width: 100%;
+	justify-content: space-around;
 }
-.addressBox .boxText{
-	margin:1px;
-}
-
-.addressBox .boxHeader{
-	margin-bottom:10px;
-}
-
-.footerSearch{
-	width: 120px;
-    height: 25px;
-    cursor: pointer;
-    border: solid #686a6a 1px;
-}
-
-.navImg{
+.navText {
 	list-style: none;
-    font-size: 25px;
-    padding-top: 5px;
-    color:white;
-    margin-right: 15px;
-    cursor:pointer;
+	margin: 10px;
+	display: inline-block;
+	cursor: pointer;
 }
-.joinText{
-	    color: white;
+.contactBox, .addressBox, .logoBox, .searchBox {
+	max-width: 200px;
+	margin-right: 35px;
+	margin-left: 35px;
 }
-
-.heroImageContainer{
+.addressBox .boxText {
+	margin: 1px;
+}
+.addressBox .boxHeader {
+	margin-bottom: 10px;
+}
+.footerSearch {
+	width: 120px;
+	height: 25px;
+	cursor: pointer;
+	border: solid #686a6a 1px;
+}
+.navImg {
+	list-style: none;
+	font-size: 25px;
+	padding-top: 5px;
+	color: white;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.joinText {
+	color: white;
+}
+.heroImageContainer {
 	background-image: url("room.jpg");
 	font-family: 'Nunito Sans', sans-serif;
-	    display: inline-block;
-    width: 100%;
-    text-align: center;
-    height: 360px;
-    color: white;
-    background-position: right;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	height: 360px;
+	color: white;
+	background-position: right;
 }
-
-.imageDarkener{
-	    background-color: black;
-    width: 100%;
-    opacity: 0.5;
-    display: inline-block;
-    height: 100%;
+.imageDarkener {
+	background-color: black;
+	width: 100%;
+	opacity: 0.5;
+	display: inline-block;
+	height: 100%;
 }
-
-.heroDesc{
+.heroDesc {
 	max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    font-weight: 200;
+	margin: auto;
+	font-size: 18px;
+	font-weight: 200;
 }
-
-.heroImageArea h1{
+.heroImageArea h1 {
 	font-size: 28px;
 	margin-top: 100px;
 }
-
-.memberName{
+.memberName {
 	font-weight: 600;
 	font-size: 20px;
 }
-
-.memberDesc{
+.memberDesc {
 	font-weight: 200;
 }
-
-.memberImage{
+.memberImage {
 	height: 250px;
-    width: 200px;
+	width: 200px;
 }
-
-.boardContainer{
-    font-family: 'Nunito Sans', sans-serif;
-    display: flex;
-    color: #666666;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.member{
-    text-align: center;
-    width: 200px;
-    height: 250px;
-    margin: 20px;
-    margin-bottom: 70px;
-}
-
-.mainContactInfo{
+.boardContainer {
 	font-family: 'Nunito Sans', sans-serif;
-    width: 100%;
-    display: flex;
-}
-
-.nameBoxContainer, .phoneBoxContainer, .emailBoxContainer, .commentBoxContainer{
-    flex-basis: 33%;
-    flex-grow: 1;
-    margin: 10px;
-}
-
-.mainInfoText{
+	display: flex;
+	color: #666666;
 	width: 100%;
-    margin: 0;
-    text-align: center;
-    font-family: 'Nunito Sans', sans-serif;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-
-.mainContactInfoBox{
-	    font-family: 'Nunito Sans', sans-serif;
-    width: 100%;
-    display: flex;
-    max-width: 960px;
-    margin: auto;
+.member {
+	text-align: center;
+	width: 200px;
+	height: 250px;
+	margin: 20px;
+	margin-bottom: 70px;
 }
-.nameBox, .phoneBox, .emailBox{
-	    margin: auto;
-    position: relative;
-    width: 100%;
-}
-
-.commentBox{
-	width: 100%;
-    height: 200px;
-}
-
-.commentBoxContainer{
-	    max-width: 960px;
-    margin: auto;
-}
-
-textarea {
-  resize: none;
-}
-
-.contactContainer{
-	    color: #666666;
-}
-
-.mapOfLocation{
-	background-image: url(maps.png);
-    width: 100%;
-    height: 550px;
-    margin-top: 20px;
-    display: inline-block;
-    background-size: contain;
-}
-.submitBtn{
-	background-color: #016c5c;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 200;
-    height: 20px;
-    width: 65px;
-    padding: 15px;
-    padding-top: 15px;
-    font-size: 16px;
-    margin: auto;
-    color: white;
-    text-align: center;
-    cursor:pointer;
-    margin-top:20px;
-}
-
-.innerInfoBox{
-	width: 350px;
-    height: 425px;
-    background-color: white;
-    margin-left: 15%;
-    font-family: 'Nunito Sans', sans-serif;
-    padding:10px;
-    margin-top: 50px;
-}
-
-.innerInfoBox h1{
+.mainContactInfo {
 	font-family: 'Nunito Sans', sans-serif;
-    font-weight: 300;
-}
-
-.innerLocation, .inner2ndLocation{
-	    color: #999999;
-}
-
-.innerInfoBox i{
-margin-top:2.5px;
-margin-right:5px;
-}
-
-.donationDesc{
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 100px;
-    position: relative;
-    width: calc(80% - 100px);
-    max-width: 1200px;
-    /* margin: auto; */
-    display: inline-block;
-}
-
-.donationDescContainer{
 	width: 100%;
-    display: inline-block;
-    text-align:center;
+	display: flex;
 }
-
-.donatePage{
-	color:#9a9a9a;
+.nameBoxContainer, .phoneBoxContainer, .emailBoxContainer, .commentBoxContainer {
+	flex-basis: 33%;
+	flex-grow: 1;
+	margin: 10px;
 }
-
-.donateInfo input{
-    margin-left: -150px;
-    width: 300px;
-    left: 50%;
-    position: relative;
+.mainInfoText {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
 }
-
-.donateInfo{
+.mainContactInfoBox {
+	font-family: 'Nunito Sans', sans-serif;
+	width: 100%;
+	display: flex;
+	max-width: 960px;
 	margin: auto;
-    max-width: 500px;
 }
-.donate{
-	    margin-bottom: 20px;
+.nameBox, .phoneBox, .emailBox {
+	margin: auto;
+	position: relative;
+	width: 100%;
 }
-
-.donateSubmitBtns{
-	    margin-bottom: 50px;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
+.commentBox {
+	width: 100%;
+	height: 200px;
 }
-
-.donateCancelBtn{
-	    background-color: #016c5c;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 200;
-    height: 20px;
-    width: 65px;
-    padding: 15px;
-    padding-top: 15px;
-    font-size: 16px;
-    color: white;
-    padding-left: 30px;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    margin: 5px;
-    padding-left: 30px;
+.commentBoxContainer {
+	max-width: 960px;
+	margin: auto;
 }
-
-.donatePayBtn{
-	margin: 5px;
-    display: flex;
-    padding-left: 30px;
-    width: 45px;
+textarea {
+	resize: none;
+}
+.contactContainer {
+	color: #666666;
+}
+.mapOfLocation {
+	background-image: url(maps.png);
+	width: 100%;
+	height: 550px;
+	margin-top: 20px;
+	display: inline-block;
+	background-size: contain;
+}
+.submitBtn {
 	background-color: #016c5c;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 200;
-    height: 20px;
-    padding: 15px;
-    padding-top: 15px;
-    font-size: 16px;
-    color: white;
-    padding-left: 30px;
-    text-align: center;
-    cursor: pointer;
-
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 200;
+	height: 20px;
+	width: 65px;
+	padding: 15px;
+	padding-top: 15px;
+	font-size: 16px;
+	margin: auto;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 20px;
 }
-
-.donateCommentBox{
+.innerInfoBox {
+	width: 350px;
+	height: 425px;
+	background-color: white;
+	margin-left: 15%;
+	font-family: 'Nunito Sans', sans-serif;
+	padding: 10px;
+	margin-top: 50px;
+}
+.innerInfoBox h1 {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 300;
+}
+.innerLocation, .inner2ndLocation {
+	color: #999999;
+}
+.innerInfoBox i {
+	margin-top: 2.5px;
+	margin-right: 5px;
+}
+.donationDesc {
+	font-family: 'Nunito Sans', sans-serif;
+	padding: 100px;
+	position: relative;
+	width: calc(80% - 100px);
+	max-width: 1200px;
+	/* margin: auto; */
+	display: inline-block;
+}
+.donationDescContainer {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.donatePage {
+	color: #9a9a9a;
+}
+.donateInfo input {
+	margin-left: -150px;
+	width: 300px;
+	left: 50%;
+	position: relative;
+}
+.donateInfo {
+	margin: auto;
+	max-width: 500px;
+}
+.donate {
+	margin-bottom: 20px;
+}
+.donateSubmitBtns {
+	margin-bottom: 50px;
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+.donateCancelBtn {
+	background-color: #016c5c;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 200;
+	height: 20px;
+	width: 65px;
+	padding: 15px;
+	padding-top: 15px;
+	font-size: 16px;
+	color: white;
+	padding-left: 30px;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	margin: 5px;
+	padding-left: 30px;
+}
+.donatePayBtn {
+	margin: 5px;
+	display: flex;
+	padding-left: 30px;
+	width: 45px;
+	background-color: #016c5c;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 200;
+	height: 20px;
+	padding: 15px;
+	padding-top: 15px;
+	font-size: 16px;
+	color: white;
+	padding-left: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+.donateCommentBox {
 	height: 150px;
 }
-
-.frequentQuestionsPage{
+.frequentQuestionsPage {
 	max-width: 1200px;
-    margin: auto;
-    margin-top: 100px;
-    font-family: 'Nunito Sans', sans-serif;
+	margin: auto;
+	margin-top: 100px;
+	font-family: 'Nunito Sans', sans-serif;
 }
-
-.frequentFeatureText{
-	    color: #999999;
+.frequentFeatureText {
+	color: #999999;
 }
-
-.frequentContainer{
-	    padding: 50px;
+.frequentContainer {
+	padding: 50px;
 }
-
-.bio{
-	    max-width: 960px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 15px;
+.bio {
+	max-width: 960px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	margin-top: 15px;
 }
-
-.bioThumbnail{
-	    margin: 10px;
-    width: 25%;
-    flex-shrink: 1;
-}
-
-.profilePic{
-	width: calc(100% - 20px);
-    height: auto;
-}
-
-.bioDesc{
+.bioThumbnail {
+	margin: 10px;
+	width: 25%;
 	flex-shrink: 1;
-    width: 75%;
 }
-
-.bioName{
-	    font-weight: 400;
-    margin-bottom: 5px;
-    margin-top: 2px;
+.profilePic {
+	width: calc(100% - 20px);
+	height: auto;
 }
-
-.bioNameDesc{
+.bioDesc {
+	flex-shrink: 1;
+	width: 75%;
+}
+.bioName {
+	font-weight: 400;
+	margin-bottom: 5px;
+	margin-top: 2px;
+}
+.bioNameDesc {
 	margin-top: 2px;
 	color: #999999;
 }
-
-.bioThumbnail i{
-	color:#016C5B;
+.bioThumbnail i {
+	color: #016C5B;
 	font-size: 21px;
 }
-
-.bioTwitter, .bioFacebook, .bioInstagram{
-	    color: #999999;
+.bioTwitter, .bioFacebook, .bioInstagram {
+	color: #999999;
 }
-.memberBio{
-	    font-family: 'Nunito Sans', sans-serif;
+.memberBio {
+	font-family: 'Nunito Sans', sans-serif;
 }
-.speakerEvents{
-	width:100%;
+.speakerEvents {
+	width: 100%;
 }
-
 .speakerEvents h1 {
 	margin-bottom: 5px;
-    font-weight: 300;
+	font-weight: 300;
 }
-
 .speakerEvents p {
-    color: #006c3f;
-    margin-top: 0px;
-	}
-
-	.followOn{
-		font-size: 20px;
-		font-weight: 200;
-		margin-top: 10px;
-	}
-
-	.hiddenUpper{
-		display:none;
-	}
-
-@media screen and (max-width:1075px){
-.socialContainer i{
-	font-size:20px;
-	}
-
-	.navContainer .navText{
-		font-size: 13px;
-	}
-
-	.contactBox, .addressBox, .logoBox, .searchBox {
-    max-width: 100%;
-    margin:auto;
-    width: 100%;
+	color: #006c3f;
+	margin-top: 0px;
 }
-
-.footerSearch{
-	margin:auto;
+.followOn {
+	font-size: 20px;
+	font-weight: 200;
+	margin-top: 10px;
 }
-
-.footerContainer{
-	flex-wrap: wrap;
-	text-align: center;
-	height:auto;
-}
-.footerContainer p{
-	margin-top:2px;
-	margin-bottom:2px;
-}
-
-.searchBox{
-	margin-bottom: 50px;
-}
-.socialContainer{
-	display:none;
-}
-.navContainer .navTextGroup{
+.hiddenUpper {
 	display: none;
 }
+.membershipDirecory {
+	font-family: 'Nunito Sans', sans-serif;
+}
+.membershipDetailsContainer {
+	margin: auto;
+	max-width: 960px;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.memberUpperName {
+	width: 100%;
+	font-weight: 500;
+	font-size: 28px;
+}
+.upperDetails {
+	width: 100%;
+}
+.upperDetails span {
+	font-size: x-large;
+	font-weight: 300;
+	color: #666666;
+}
+.lowerDetails span {
+	font-size: x-large;
+	font-weight: 300;
+	color: #666666;
+}
+.lowerDetails img {
+	max-width: 150px;
+}
+.memberLabel {
+	color: #999999;
+	font-size: 20px;
+}
+.memberSection span {
+	color: #666666;
+	font-size: 18px;
+}
+.membershipDirectory {
+	font-family: 'Nunito Sans', sans-serif;
+}
+.sectionDivider {
+	font-size: 22px;
+	color: #666666;
+	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 
-@media screen and (max-width:1024px){
-	.bio{
-		flex-wrap:wrap;
-		padding:25px;
-	}
 
-	.bioName, .bioNameDesc{
+.sponsorsBenefits{
+	width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.sponsorContactContainer{
+	max-width: 1024px;
+    margin: auto;
+    padding: 20px;
+    width: calc(100% - 50px);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sponsorContactBtn{
+	background-color: #016C5B;
+    display: inline-block;
+    color: white;
+    font-weight: 200;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    cursor:pointer;
+}
+
+.sponsorUpperBenefits, .sponsorLowerBenefits{
+display:inline-flex;
+}
+
+.sponsorUpperBenefits{
+	margin-top: 50px;
+}
+.sponsorAmount{
+	    font-size: 25px;
+}
+
+.sponsorType{
+	    font-size: 18px;
+}
+.sponsorBox span{
+	width: 100%;
+    margin-top: 10px;
+    color: #666666;
+    display: inline-block;
+}
+
+.sponsorUpperBenefits .diamond, .platinum{
+	max-width: 50%;
+    display: inline-block;
+}
+.sponsorLowerBenefits .sponsorBox{
+	width: calc(33% - 20px);
+    padding: 20px;
+}
+@media screen and (max-width:1075px) {
+	.socialContainer i {
+		font-size: 20px;
+	}
+	.navContainer .navText {
+		font-size: 13px;
+	}
+	.contactBox, .addressBox, .logoBox, .searchBox {
+		max-width: 100%;
+		margin: auto;
+		width: 100%;
+	}
+	.footerSearch {
+		margin: auto;
+	}
+	.footerContainer {
+		flex-wrap: wrap;
+		text-align: center;
+		height: auto;
+	}
+	.footerContainer p {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.searchBox {
+		margin-bottom: 50px;
+	}
+	.socialContainer {
 		display: none;
 	}
-
-		.hiddenUpper{
-		display:block;
-		width:100%;
+	.navContainer .navTextGroup {
+		display: none;
+	}
+}
+@media screen and (max-width:1024px) {
+	.bio {
+		flex-wrap: wrap;
+		padding: 25px;
 	}
 
+	.sponsorUpperBenefits .diamond, .platinum{
+	max-width: calc(100% - 20px);
+	padding:20px;
+}
+.sponsorLowerBenefits .sponsorBox{
+	width: calc(100% - 20px);
+	padding:20px;
+}
+
+	.sponsorUpperBenefits, .sponsorLowerBenefits{
+		flex-wrap: wrap;
+	}
+
+	.bioName, .bioNameDesc {
+		display: none;
+	}
+	.hiddenUpper {
+		display: block;
+		width: 100%;
+	}
 	.bioThumbnail {
-		    margin: 10px;
-    width: 100%;
-    flex-shrink: 1;
+		margin: 10px;
+		width: 100%;
+		flex-shrink: 1;
 	}
-
-	.profilePic{
-    float: left;
-    width: 50%;
-    max-width: 300px;
+	.profilePic {
+		float: left;
+		width: 50%;
+		max-width: 300px;
 	}
-
-	.bioSocialBox{
+	.bioSocialBox {
 		margin-left: 20px;
-    /* float: right; */
-    height: 100%;
-    display: inline-block;
+		/* float: right; */
+		height: 100%;
+		display: inline-block;
 	}
-	.bioDesc{
-		width:100%;
-		float:none;
+	.bioDesc {
+		width: 100%;
+		float: none;
 	}
-
-	.bioSocialBox{
+	.bioSocialBox {
 		margin-left: 20px;
-    	float:none;
-    	max-width: calc(50% - 20px);
-    	height: 100%;
-    	display: table;
+		float: none;
+		max-width: calc(50% - 20px);
+		height: 100%;
+		display: table;
 	}
-	.bioSocialInnerBox{
+	.bioSocialInnerBox {
 		display: table-cell;
-    	vertical-align: middle;
-    	padding-left: 20px;
-    	font-size: 2vw;
+		vertical-align: middle;
+		padding-left: 20px;
+		font-size: 2vw;
 	}
-
+}
+@media screen and (max-width:975px) {
+	.innerInfoBox {
+		margin-left: 0;
+		margin-top: 0px;
+		width: calc(100% - 10px);
+		height: 100%;
+		font-family: 'Nunito Sans', sans-serif;
+		padding: 10px;
+		text-align: center;
+		background-color: #e6e6e6;
 	}
-
-
-@media screen and (max-width:975px){
-	.innerInfoBox{
-    margin-left: 0;
-    margin-top:0px;
-    width: calc(100% - 10px);
-    height: 100%;
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 10px;
-    text-align: center;
-    background-color: #e6e6e6;
 }
-
-@media screen and (max-width: 768px){
-.donationDesc {
-	padding:5px;
-    font-size: 2.5vw;
+@media screen and (max-width: 768px) {
+	.donationDesc {
+		padding: 5px;
+		font-size: 2.5vw;
+	}
+	.donationDescContainer {
+		margin-bottom: 20px;
+	}
 }
-
-.donationDescContainer {
-    margin-bottom: 20px;
-}
-}
-
-@media screen and (max-width: 500px){
-.bioThumbnail i {
-    font-size: 14px;
-}
-.followOn{
-	font-size:15px;
-}
+@media screen and (max-width: 500px) {
+	.bioThumbnail i {
+		font-size: 14px;
+	}
+	.followOn {
+		font-size: 15px;
+	}
+	.membershipDetailsContainer {
+		padding: 10px;
+		max-width: 960px;
+		width: calc(100% - 10px);
+	}
 }
 .mainContactInfoBox {
-    font-family: 'Nunito Sans', sans-serif;
-    width: 100%;
-    display: inline-block;
-    }
-
-    .nameBoxContainer, .phoneBoxContainer, .emailBoxContainer, .commentBoxContainer{
-    flex-basis: inherit;
-    width: 100%;
-    display: inline-block;
-    margin: 10px;
-}
-
-.commentBoxContainer{
+	font-family: 'Nunito Sans', sans-serif;
 	width: 100%;
-    /* margin: auto; */
-    display: inline-block;
+	display: inline-block;
 }
-
-.commentBox{
+.nameBoxContainer, .phoneBoxContainer, .emailBoxContainer, .commentBoxContainer {
+	flex-basis: inherit;
 	width: 100%;
-    height: 50px;
-    margin-left: -150px;
-    left: 50%;
-    position: relative;
-    width: 100%;
-    max-width: 300px;
+	display: inline-block;
+	margin: 10px;
 }
-
-.nameBox, .phoneBox, .emailBox{
-    margin-left: -150px;
-    left: 50%;
-    position: relative;
-    width: 100%;
-    max-width: 300px;
+.commentBoxContainer {
+	width: 100%;
+	/* margin: auto; */
+	display: inline-block;
 }
-
+.commentBox {
+	width: 100%;
+	height: 50px;
+	margin-left: -150px;
+	left: 50%;
+	position: relative;
+	width: 100%;
+	max-width: 300px;
 }
-
-.mainElement{
-	min-height:100vh;
+.nameBox, .phoneBox, .emailBox {
+	margin-left: -150px;
+	left: 50%;
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+}
+}
+.mainElement {
+	min-height: 100vh;
 }
