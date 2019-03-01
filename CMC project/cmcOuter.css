@@ -432,6 +432,7 @@ textarea {
     width: calc(100% - 50px);
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .sponsorContactBtn{
@@ -474,6 +475,247 @@ display:inline-flex;
 .sponsorLowerBenefits .sponsorBox{
 	width: calc(33% - 20px);
     padding: 20px;
+}
+
+.honoraryFoundersContainer{
+	width: calc(100% - 40px);
+    /* color: black; */
+    padding: 20px;
+}
+
+.foundersLabel{
+	font-weight: 300;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.founderImageContainer{
+	max-width: 500px;
+    margin: auto;
+}
+
+.founderImageContainer img{
+	max-width:33%;
+}
+
+.honoraryFoundersDesc{
+	max-width: 600px;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.sponsorsPage{
+	    max-width: 1024px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.partnerImageContainer img{
+	flex-grow: 1;
+    max-width: 33%;
+    max-height: 70px;
+    margin:5px;
+}
+
+.partnerType{
+	    font-weight: 300;
+}
+
+.partnerImageContainer{
+	max-width: 1024px;
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+
+.partnersContainer{
+	    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sponsorsBoxContainer{
+	width: 100%;
+    max-width: 1024px;
+    display: flex;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #999999;
+    margin: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sponsorsBox{
+	width:33%;
+	text-align: center;
+}
+.sponsorsBox p{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+.goldSponsorsLabel{
+	width:100%;
+}
+
+.goldSponsorsLabel h1{
+	margin: auto;
+	color: black;
+	font-weight: 300;
+}
+
+.eventListing{
+	max-width: 1024px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    margin: auto;
+    margin-bottom:50px;
+    margin-top:50px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.eventContainer{
+	width: calc(100% - 40px);
+    padding: 20px;
+    display: inline-block;
+}
+
+.imageRow{
+	width: 100%;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    background-color: #999999;
+}
+
+.title{
+	width:100%;
+	float:left;
+}
+
+.imageRow img{
+	flex-basis: auto;
+    max-width: 200px;
+}
+
+.eventInfo{
+	display: inline-block;
+    padding: 20px;
+}
+
+.eventInfo .title{
+	width: 100%;
+    float: left;
+    font-weight: 400;
+    display: inline-flex;
+}
+
+.bottomInfo i{
+	color:#016C5B;
+}
+
+.greenBar{
+	height: 12.5px;
+    margin: 0;
+    padding: 0;
+    background-color: #016C5B
+}
+
+.learnEvent{
+	display: inline-block;
+    padding: 5px;
+    background-color: #016C5B;
+    color: white;
+    font-weight: 200;
+    width: 120px;
+    text-align: center;
+}
+.bottomEventTime, .bottomEventLocation{
+	margin: 15px;
+}
+.bottomEventDate{
+	margin: 15px;
+	margin-left:0;
+}
+
+.pastEvents{
+	width: 100%;
+}
+
+.eventArchive{
+    max-width: 1024px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    margin: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.pastEventDesc{
+	display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.leftSideArchive{
+	display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.rightSideArchive{
+	display: inline-block;
+    float: right;
+    width: 50%;
+}
+
+.pastEventInfo{
+display: inline-block;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.pastEventInfo h1{
+	font-weight: 400;
+}
+.pastEventSocial{
+	font-size:20px;
+	margin:5px;
+}
+.archiveInfo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pastEvents i {
+	color:#016C5B;
+}
+
+.archiveEventPrice, .archiveEventFood{
+	float: right;
+}
+
+.pastEventUpperDetails{
+	display: inline-block;
+}
+.pastEventLowerDetails{
+	width:100%;
+}
+
+.moreEventsBtn{
+	background-color: #01486C;
+    display: inline-block;
+    color: white;
+    font-weight: 200;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.upcomingEvents i{
+	color:#01486C;
 }
 @media screen and (max-width:1075px) {
 	.socialContainer i {
@@ -534,6 +776,10 @@ display:inline-flex;
 	.bioName, .bioNameDesc {
 		display: none;
 	}
+
+	.pastEventInfo{
+display:none;
+}
 	.hiddenUpper {
 		display: block;
 		width: 100%;
@@ -571,6 +817,37 @@ display:inline-flex;
 		padding-left: 20px;
 		font-size: 2vw;
 	}
+
+	.bottomEventDate {
+    margin: 15px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+}
+
+.bottomEventTime {
+    margin: 15px;
+    float: left;
+    width: 100%;
+    margin-left: 0px;
+}
+.bottomEventLocation{
+	width: calc(90% - 140px);
+	margin: 15px;
+    float: left;
+    margin-left: 0px;
+}
+
+.learnEvent{
+	    display: inline-block;
+    padding: 5px;
+    background-color: #016C5B;
+    color: white;
+    font-weight: 200;
+    height: 25px;
+    width: 120px;
+    text-align: center;
+}
 }
 @media screen and (max-width:975px) {
 	.innerInfoBox {
@@ -583,6 +860,10 @@ display:inline-flex;
 		text-align: center;
 		background-color: #e6e6e6;
 	}
+
+	.sponsorsBox {
+    width: 100%;
+}
 }
 @media screen and (max-width: 768px) {
 	.donationDesc {
@@ -605,6 +886,27 @@ display:inline-flex;
 		max-width: 960px;
 		width: calc(100% - 10px);
 	}
+
+	.bottomEventLocation{
+	width: 100%;
+}
+
+.imageRow {
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    background-color: #999999;
+}
+
+.imageRow img {
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+}
+
+.eventContainer{
+	    text-align: center;
 }
 .mainContactInfoBox {
 	font-family: 'Nunito Sans', sans-serif;
