@@ -119,7 +119,8 @@ body, html {
 	font-size: 20px;
 }
 .memberDesc {
-	font-weight: 200;
+	color: #999999;
+    font-weight: 400;
 }
 .memberImage {
 	height: 250px;
@@ -221,6 +222,15 @@ textarea {
 .innerLocation, .inner2ndLocation {
 	color: #999999;
 }
+
+.innerLocation i{
+	color: #016C5B;
+}
+
+.inner2ndLocation i{
+	color: #01486C;
+}
+
 .innerInfoBox i {
 	margin-top: 2.5px;
 	margin-right: 5px;
@@ -231,6 +241,7 @@ textarea {
 	position: relative;
 	width: calc(80% - 100px);
 	max-width: 1200px;
+	color:black;
 	/* margin: auto; */
 	display: inline-block;
 }
@@ -464,7 +475,7 @@ display:inline-flex;
 .sponsorBox span{
 	width: 100%;
     margin-top: 10px;
-    color: #666666;
+    color: #999999;
     display: inline-block;
 }
 
@@ -539,7 +550,7 @@ display:inline-flex;
     max-width: 1024px;
     display: flex;
     font-family: 'Nunito Sans', sans-serif;
-    color: #999999;
+    color: #666666;
     margin: auto;
     text-align: center;
     flex-wrap: wrap;
@@ -629,6 +640,7 @@ display:inline-flex;
     color: white;
     font-weight: 200;
     width: 120px;
+    float: right;
     text-align: center;
 }
 .bottomEventTime, .bottomEventLocation{
@@ -641,6 +653,9 @@ display:inline-flex;
 
 .pastEvents{
 	width: 100%;
+	padding: 20px;
+	display: inline-block;
+    width: calc(100% - 40px);
 }
 
 .eventArchive{
@@ -717,6 +732,42 @@ display: inline-block;
 .upcomingEvents i{
 	color:#01486C;
 }
+
+.pressCoveredEvent a{
+	color: #006c3f;
+    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.pressCoverage{
+	display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.pressCoverage h1{
+	display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.pressCoveredEvent{
+	display: inline-block;
+}
+
+.featuredEventVideo iframe{
+    width: 100%;
+    min-height: 500px;
+}
+.featuredEventVideo{
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:20px;
+}
 @media screen and (max-width:1075px) {
 	.socialContainer i {
 		font-size: 20px;
@@ -777,8 +828,16 @@ display: inline-block;
 		display: none;
 	}
 
-	.pastEventInfo{
-display:none;
+	.pastEventInfo, .pastEventDesc{
+width:100%;
+}
+
+.pastEventInfo{
+	display:none;
+}
+
+.pastEvents{
+	display:inline-block;
 }
 	.hiddenUpper {
 		display: block;
@@ -848,6 +907,13 @@ display:none;
     width: 120px;
     text-align: center;
 }
+.pressCoveredEvent{
+	width: 100%;
+}
+
+.pressCoverage{
+	text-align: center;
+}
 }
 @media screen and (max-width:975px) {
 	.innerInfoBox {
@@ -880,6 +946,10 @@ display:none;
 	}
 	.followOn {
 		font-size: 15px;
+	}
+
+	.learnEvent{
+		    float:none;
 	}
 	.membershipDetailsContainer {
 		padding: 10px;
@@ -941,6 +1011,7 @@ display:none;
 	max-width: 300px;
 }
 }
-.mainElement {
-	min-height: 100vh;
+.boardContainer{
+	margin-bottom:50px;
+	margin-top:50px;
 }
