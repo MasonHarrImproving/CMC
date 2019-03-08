@@ -51,15 +51,20 @@
 ?>
 <section class="sponsorsPage">
             <div class="sponsorContactContainer">
-            <p class="sponsorContactDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Ultrices eros in cursus turpis massa. Risus ultricies tristique nulla aliquet enim tortor. Eu augue ut lectus arcu bibendum at varius vel pharetra. Quis ipsum suspendisse ultrices gravida dictum. Orci sagittis eu volutpat odio facilisis mauris sit amet. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Diam maecenas ultricies mi eget mauris pharetra. Aliquet eget sit amet tellus cras. Ornare arcu dui vivamus arcu felis. Libero id faucibus nisl tincidunt eget nullam non nisi est. Pulvinar etiam non quam lacus. Elit duis tristique sollicitudin nibh sit. Non nisi est sit amet facilisis. Pharetra convallis posuere morbi leo urna. Sit amet porttitor eget dolor morbi.</p>
-            <div class="sponsorContactBtn">Learn More About Sponsorship</div>
+            <p class="sponsorContactDesc"><?php the_field('sponsorship_info'); ?></p>
+            <div class="sponsorContactBtn"><?php the_field('sponsorship_btn'); ?></div>
         </div>
 <div class="honoraryFoundersContainer">
         <h1 class="foundersLabel">Honorary Founders</h1>
         <div class="founderImageContainer">
-    <img src="DMG.jpg"><img src="AEP.jpg"><img src="blue.png">
+            <?php 
+            $imageOne = get_field('honorary_founders_image_one');
+            $imageTwo = get_field('honorary_founders_image_two');
+            $imageThree = get_field('honorary_founders_image_three');
+            ?>
+    <img src="<?php echo $imageThree['url'];?>"><img src="<?php echo $imageTwo['url'];?>"><img src="<?php echo $imageOne['url'];?>">
         </div>
-        <div class="honoraryFoundersDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="honoraryFoundersDesc"><?php the_field('HonoraryFoundersDesc'); ?></div>
     </div>
     <div class="partnersContainer">
         <h1 class="partnerType">Diamond Partners</h1>
