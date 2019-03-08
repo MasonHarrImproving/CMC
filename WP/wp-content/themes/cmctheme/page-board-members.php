@@ -31,31 +31,21 @@
     */
 ?>
   	<section class="boardContainer mainElement">
-  		<div class="member">
-  			<img class="memberImage" src="placeImg.jpg" height="250" width="200">
-  			<span class="memberName">John Smith<br></span>
-  			<span class="memberDesc">Executive President<br>Executive Operations</span>
-  		</div>
-  		  		<div class="member">
-  			<img class="memberImage" src="placeImg.jpg" height="250" width="200">
-  			<span class="memberName">John Smith<br></span>
-  			<span class="memberDesc">Executive President<br>Executive Operations</span>
-  		</div>
-  		  		<div class="member">
-  			<img class="memberImage" src="placeImg.jpg" height="250" width="200">
-  			<span class="memberName">John Smith<br></span>
-  			<span class="memberDesc">Executive President<br>Executive Operations</span>
-  		</div>
-  		  		<div class="member">
-  			<img class="memberImage" src="placeImg.jpg" height="250" width="200">
-  			<span class="memberName">John Smith<br></span>
-  			<span class="memberDesc">Executive President<br>Executive Operations</span>
-  		</div>
-  		  		<div class="member">
-  			<img class="memberImage" src="placeImg.jpg" height="250" width="200">
-  			<span class="memberName">John Smith<br></span>
-  			<span class="memberDesc">Executive President<br>Executive Operations</span>
-  		</div>
+      <?php 
+      for($i = 1; $i <= 4; $i++){
+        $memberImage = get_field('member_image_'.$i);
+      echo '<div class="member">';
+        echo '<img class="memberImage" src="'.$memberImage["url"].'" height="250" width="200">';
+        echo '<span class="memberName">';
+        echo the_field('member_title_'.$i).'<br>';
+        echo '</span>';
+        echo '<span class="memberDesc">';
+        echo the_field('member_subtitle_'.$i).'<br>';
+        echo the_field('member_category_'.$i);
+        echo '</span>';
+      echo '</div>';
+      }
+      ?>
   	</section>
 
 <?php
