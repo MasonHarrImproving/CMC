@@ -88,7 +88,6 @@ body, html {
 	color: white;
 }
 .heroImageContainer {
-	background-image: url("room.jpg");
 	font-family: 'Nunito Sans', sans-serif;
 	display: inline-block;
 	width: 100%;
@@ -477,6 +476,8 @@ textarea {
 }
 .sponsorUpperBenefits, .sponsorLowerBenefits {
 	display: inline-flex;
+	padding:20px;
+	width:calc(100% - 40px);
 }
 .sponsorUpperBenefits {
 	margin-top: 50px;
@@ -495,6 +496,7 @@ textarea {
 }
 .sponsorUpperBenefits .diamond, .platinum {
 	max-width: 50%;
+	min-width:50%;
 	display: inline-block;
 }
 .sponsorLowerBenefits .sponsorBox {

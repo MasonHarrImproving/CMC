@@ -267,11 +267,14 @@ function update_meta_data_for_post($post_id, $orig_val, $new_val, $meta_key) {
  * - Event
  * - Speaker
  * - FAQ
+ * - Benefits
  */
 
 require get_template_directory() . '/custom-types/sponsor/functions.php';
 require get_template_directory() . '/custom-types/board-member/functions.php';
 require get_template_directory() . '/custom-types/speaker/functions.php';
+require get_template_directory() . '/custom-types/questions/functions.php';
+require get_template_directory() . '/custom-types/benefits/functions.php';
 require get_template_directory() . '/custom-types/event/functions.php';
 
 /**

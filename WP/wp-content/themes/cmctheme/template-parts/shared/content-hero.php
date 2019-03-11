@@ -1,9 +1,11 @@
+<?php $heroImage = get_field('hero_background_image'); ?>
+
 <section class="heroImageArea mainElement">
-	<div class="heroImageContainer">
+	<div class="heroImageContainer"style="background-image: url(<?php echo $heroImage['url']; ?>);">
 		<div class="imageDarkener">
-		<h1>Board Of Directors</h1>
-		<p class="heroDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit
+		<h1><?php the_field('hero_title'); ?></h1>
+		<p class="heroDesc">
+<?php the_field('hero_description'); ?>
 		</p>
 	</div>
 </div>
