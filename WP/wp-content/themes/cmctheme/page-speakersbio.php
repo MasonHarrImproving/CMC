@@ -1,0 +1,51 @@
+    <?php
+    /*
+        Template Name: Speakers Bio Template
+    */
+        get_header();
+    ?>
+
+    <?php
+        /*
+            The following section would be the portion that is customizable.
+        */
+    ?>
+<?php
+    get_template_part('template-parts/shared/content-hero');
+?>
+
+<section class="memberBio mainElement">
+      <div class="bio">
+        <h1 class="hiddenUpper bioName">Scott Light</h1>
+           <p class="hiddenUpper bioNameDesc">Anchor,TV</p>
+        <div class="bioThumbnail"><img class="profilePic" src="name.jpg">
+          <div class="bioSocialBox">
+            <div class="bioSocialInnerBox">
+      <p class="followOn"> Follow on social media</p>
+      <p class="bioTwitter"><i class="fa fa-twitter"></i> @spotlight10tv</p>
+      <p class="bioTwitter"><i class="fa fa-twitter"></i> @10TV</p>
+      <p class="bioInstagram"><i class="fa fa-instagram"></i> @wbns10tv</p>
+      <p class="bioFacebook"><i class="fa fa-facebook"></i> @ScottLightWBNS10TV</p>
+      <p class="bioFacebook"><i class="fa fa-facebook"></i> @WBNS10TV</p>
+    </div>
+  </div>
+        </div>
+        <div class="bioDesc">
+          <h1 class="bioName">Scott Light</h1>
+           <p class="bioNameDesc">Anchor,TV</p>
+          <p class="memberDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta. Nunc id cursus metus aliquam. Ullamcorper sit amet risus nullam eget felis eget nunc. Sed vulputate mi sit amet mauris commodo quis imperdiet. Bibendum est ultricies integer quis auctor elit sed. Leo a diam sollicitudin tempor id eu nisl nunc. Bibendum arcu vitae elementum curabitur vitae nunc sed. In hac habitasse platea dictumst vestibulum rhoncus est. Dui accumsan sit amet nulla. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Consectetur purus ut faucibus pulvinar. Netus et malesuada fames ac turpis. Enim nulla aliquet porttitor lacus luctus accumsan. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ut aliquam purus sit amet. Eget nulla facilisi etiam dignissim diam. Ac placerat vestibulum lectus mauris ultrices eros. Congue mauris rhoncus aenean vel elit scelerisque mauris. Nisl nunc mi ipsum faucibus vitae. Lectus proin nibh nisl condimentum id. Malesuada pellentesque elit eget gravida cum. In metus vulputate eu scelerisque felis imperdiet proin. Interdum velit euismod in pellentesque massa placerat duis. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Purus ut faucibus pulvinar elementum integer. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Vel pharetra vel turpis nunc eget lorem. Nunc vel risus commodo viverra maecenas accumsan. Montes nascetur ridiculus mus mauris vitae. Nulla facilisi etiam dignissim diam quis. Elementum pulvinar etiam non quam lacus. Magna etiam tempor orci eu. Aliquam malesuada bibendum arcu vitae elementum curabitur. Tortor posuere ac ut consequat semper viverra nam. Fringilla urna porttitor rhoncus dolor purus non enim praesent.
+            <br>
+            <br>
+          Netus et malesuada fames ac turpis. Enim nulla aliquet porttitor lacus luctus accumsan. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ut aliquam purus sit amet. Eget nulla facilisi etiam dignissim diam. Ac placerat vestibulum lectus mauris ultrices eros. Congue mauris rhoncus aenean vel elit scelerisque mauris. Nisl nunc mi ipsum faucibus vitae. Lectus proin nibh nisl condimentum id. Malesuada pellentesque elit eget gravida cum. In metus vulputate eu scelerisque felis imperdiet proin. Interdum velit euismod in pellentesque massa placerat duis. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Purus ut faucibus pulvinar elementum integer. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Vel pharetra vel turpis nunc eget lorem. Nunc vel risus commodo viverra maecenas accumsan. Montes nascetur ridiculus mus mauris vitae. Nulla facilisi etiam dignissim diam quis. Elementum pulvinar etiam non quam lacus. Magna etiam tempor orci eu. Aliquam malesuada bibendum arcu vitae elementum curabitur. Tortor posuere ac ut consequat semper viverra nam. Fringilla urna porttitor rhoncus dolor purus non enim praesent.
+          </p>
+          <div class="speakerEvents">
+            <h1 >Spearkers Events</h1>
+            <p>Hear Me Now: Bullying, Cyberbullying and Our Children.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<?php
+    get_footer();
+?>

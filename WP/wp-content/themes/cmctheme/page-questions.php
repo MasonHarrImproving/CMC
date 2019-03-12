@@ -9,11 +9,11 @@
     get_template_part('template-parts/shared/content-hero');
 ?>
 <?php
-    $bronze_args = array(
+    $faqgroup = array(
         'post_type' => 'faq',
     );
     
-    $query = new WP_Query($bronze_args);
+    $query = new WP_Query($faqgroup);
 ?>
   <section class="frequentQuestionsPage mainElement">
     <div class="frequentContainer">

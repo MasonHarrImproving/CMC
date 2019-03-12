@@ -117,38 +117,7 @@ function event_meta_box($post) { ?>
 
 	?>
 	<?php wp_nonce_field(basename(__FILE__), 'event_nonce'); ?>
-	<div>
-		<label style="width:150px;" for="event-legacy-fund">Legacy Fund</label>
-		<input type="text" name="event-legacy-fund" id="event-legacy-fund" value="<?php echo esc_attr( $event_legacy_fund ); ?>" size="30" />
-    </div>
-    
-    <div>
-		<label style="width:150px;" for="event-date">Date</label>
-		<input type="date" name="event-date" id="event-date" value="<?php echo esc_attr( $event_date ); ?>" />
-	</div>
-    
-    <div>
-		<label style="width:150px;" for="event-registration-time">Registration Time</label>
-		<input type="date" name="event-registration-time" id="event-registration-time" value="<?php echo esc_attr( $event_registration_time ); ?>" />
-    </div>
 
-    <div>
-		<label style="width:150px;" for="event-program-time">Program Time</label>
-		<input type="time" name="event-program-time" id="event-program-time" value="<?php echo esc_attr( $event_program_time ); ?>" />
-    </div>
-
-    <div>
-        <label style="width:150px;" for="event-speaker">Speaker</label>
-        <select name="event-speaker" id="event-speaker">
-            <?php
-                foreach ($speakers as $speaker) {
-					?>
-						<option value='<?php echo $speaker->ID ?>'><?php echo $speaker->post_title ?></option>
-					<?php
-				}
-            ?>
-        </select>
-    </div>
     <?php
 }
 

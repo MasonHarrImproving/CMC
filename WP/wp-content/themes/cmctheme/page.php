@@ -15,6 +15,10 @@ get_header();
 
 <?php 
 $heroimage = get_field('home_page_hero_image');
+$mainevent = get_field('main_event');
+$subevent1 = get_field('sub_event_1');  
+$subevent2 = get_field('sub_event_2');
+$cmcstats = get_field('stats');   
 ?>
 	<section class="homePage">
     <div class="homePageHero" style="background-image:url(<?php echo $heroimage['url'];?>)">
@@ -31,15 +35,15 @@ $heroimage = get_field('home_page_hero_image');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="imageRow">
-        <img src="room.jpg">
+        <img src="<?php echo $mainevent['image']['url'];?>">
         </div>
         <div class="eventInfo">
-        <h1 class="title">Harlem Renaissance: A city wide arts celebration</h1>
-        <p class="eventDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1 class="title"><?php echo $mainevent['title'];?></h1>
+        <p class="eventDesc"><?php echo $mainevent['description'];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> April 4th, 2018</span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> 12:00PM - 1:15PM</span>
-          <div class="learnEvent">Learn More</div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $mainevent['date'];?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $mainevent['start_time'];?> - <?php echo $mainevent['end_time'];?></span>
+          <div class="learnEvent"><?php echo $mainevent['button'];?></div>
         </div>
       </div>
       </div>
@@ -50,12 +54,12 @@ $heroimage = get_field('home_page_hero_image');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="eventInfo">
-        <h1 class="title">Harlem Renaissance: A city wide arts celebration</h1>
-        <p class="eventDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1 class="title"><?php echo $subevent1['title'];?></h1>
+        <p class="eventDesc"><?php echo $subevent1['description'];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> April 4th, 2018</span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> 12:00PM - 1:15PM</span>
-          <div class="learnEvent">Learn More</div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $subevent1['date'];?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $subevent1['start_time'];?> - <?php echo $subevent1['end_time'];?></span>
+          <div class="learnEvent"><?php echo $subevent1['button'];?></div>
         </div>
       </div>
       </div>
@@ -64,12 +68,12 @@ $heroimage = get_field('home_page_hero_image');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="eventInfo">
-        <h1 class="title">Harlem Renaissance: A city wide arts celebration</h1>
-        <p class="eventDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1 class="title"><?php echo $subevent2['title'];?></h1>
+        <p class="eventDesc"><?php echo $subevent2['description'];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> April 4th, 2018</span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> 12:00PM - 1:15PM</span>
-          <div class="learnEvent">Learn More</div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $subevent2['date'];?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $subevent2['start_time'];?> - <?php echo $subevent2['end_time'];?></span>
+          <div class="learnEvent"><?php echo $subevent2['button'];?></div>
         </div>
       </div>
       </div>
@@ -78,32 +82,34 @@ $heroimage = get_field('home_page_hero_image');
   </div>
   <div class="moreEventsContainer">
   <div class="moreEvents">
-    More Events
+    <?php the_field('more_events_button');?>
     </div>
   </div>
   <div class="archiveHero">
     <div class="imageLightener">
     <div class="archiveHeroText">
-    <h1><b>Missed</b> the last forum?</h1>
-    <p>Visit our forum archives to watch complete recordings on YouTube, check out the photo gallery, and more.</p>
-    <div><div class="archiveLink">GO TO THE ARCHIVE</div>
+    <?php the_field('archive_text_title');?>
+    <p><?php the_field('archive_text_description');?></p>
+    <div><div class="archiveLink"><?php the_field('archive_button');?></div>
 </div>
     </div>
     </div>
 </div>
-    <div class="joinEvent"><h1><b>Not </b>your average "club"</h1><h2>Stuffy members and boring speakers are out<br> Enlightened engagement and spirited debate are in.</h2></div>
+    <div class="joinEvent">
+<?php the_field('under_archive_title');?>
+    </div>
     <div class="statsContainer">
     <div class="statVideo"></div>
-    <div class="statText"><h1>What makes up a 21st century civic engagement organization?</h1>
+    <div class="statText"><h1><?php echo $cmcstats['title'];?></h1>
       <div class="innerContainer">
-<div class="membersStat stat"><i class="fa fa-users"></i><span>1,265</span>
+<div class="membersStat stat"><i class="fa fa-users"></i><span><?php echo $cmcstats['members'];?></span>
 <span class="statType">Members</span>
 </div>
-<div class="sponsorsStat stat"><i class="fa fa-suitcase"></i><span>198</span>
+<div class="sponsorsStat stat"><i class="fa fa-suitcase"></i><span><?php echo $cmcstats['sponsors'];?></span>
 <span class="statType">Sponsors</span></div>
-<div class="eventsStat stat"><i class="fa fa-calendar-o"></i><span>52+</span>
+<div class="eventsStat stat"><i class="fa fa-calendar-o"></i><span><?php echo $cmcstats['annual_events'];?></span>
 <span class="statType">Annual Events</span></div>
-<div class="speakersStat stat"><i class="fa fa-user"></i><span>210+</span>
+<div class="speakersStat stat"><i class="fa fa-user"></i><span><?php echo $cmcstats['speakers'];?></span>
 <span class="statType">Speakers each year</span></div>
 </div>
     </div>
@@ -111,36 +117,35 @@ $heroimage = get_field('home_page_hero_image');
   <div class="archiveHero">
     <div class="imageLightener actionHero">
     <div class="archiveHeroText">
-    <h1><b>Be a part</b> of the action</h1>
-    <p>Join the columbus metropolitan club to join the best conversations in town and gain access to special benefits</p>
-    <div class="joinActionBtnContainer"><div class="joinAction">Join Now</div>
+    <?php the_field('action_area_title');?>
+    <p><?php the_field('action_area_description');?></p>
+    <div class="joinActionBtnContainer"><div class="joinAction"><?php the_field('action_area_button');?></div>
 </div>
     </div>
     </div>
 </div>
-    <div class="joinEvent"><h1><b>Our sponsors</b> help pave the way</h1><h2>We are very fortunate to have over 200 local<br> businesses and organizations sponsor us!</h2></div>
+    <div class="joinEvent"><?php the_field('sponsors_info');?></div>
         <div class="partnersContainer">
       <div class="partnerImageContainer">
-      <img src="battelle2017.jpg">
-      <img src="CBF.jpg">
-      <img src="TCF.jpg">
-      <img src="Daily_Reporter_logo.jpg">
-      <img src="DMG.jpg">
-      <img src="JPMC.png">
-      <img src="LBrands.png">
-      <img src="MC.jpg">
-      <img src="nationwide15.jpg">
-      <img src="OFB.jpg">
-      <img src="ohiohealth_logo.gif">
-      <img src="OSU.png">
-      <img src="PNC.jpg">
-      <img src="puffin.jpg">
-      <img src="WCBE.jpg">
+        <?php $fields = acf_get_fields('78'); ?>
+
+        <?php if( $fields )
+        { 
+        foreach( $fields as $field )
+        {   
+            $images = get_field($field['name']);
+                    ?>
+            <img src="<?php echo $images['url']?>">
+            <?php
+        } 
+
+        } 
+        ?>
       </div>
     </div>
       <div class="moreSponsorsContainer">
   <div class="moreSponsors">
-    More Sponsors
+    <?php the_field('more_sponsors_button');?>
     </div>
   </div>
     </section>

@@ -89,41 +89,7 @@ function speaker_meta_box($post) { ?>
 
 	<?php wp_nonce_field(basename(__FILE__), 'speaker_nonce'); ?>
 
-	<div>
-		<label style="width:150px;" for="speaker-company-name">Company</label>
-		<input type="text" name="speaker-company-name" id="speaker-company-name" value="<?php echo esc_attr( $speaker_company ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-company-url">Company URL</label>
-		<input type="url" name="speaker-company-url" id="speaker-company-url" value="<?php echo esc_attr( $speaker_company_url ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-job-title">Job Title</label>
-		<input type="text" name="speaker-job-title" id="speaker-job-title" value="<?php echo esc_attr( $speaker_job_title ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-bio">Bio</label><br/>
-		<?php
-			wp_editor( htmlspecialchars_decode($speaker_bio), '_speaker_bio', $settings = $speaker_bio_editor_settings );
-		?>
-	</div>
-	<hr />
-	<div>
-		<label style="width:150px;" for="speaker-twitter">Twitter</label>
-		<input type="text" name="speaker-twitter" id="speaker-twitter" value="<?php echo esc_attr( $speaker_twitter ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-instagram">Instagram</label>
-		<input type="text" name="speaker-instagram" id="speaker-instagram" value="<?php echo esc_attr( $speaker_instagram ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-linkedin">LinkedIn</label>
-		<input type="text" name="speaker-linkedin" id="speaker-linkedin" value="<?php echo esc_attr( $speaker_linkedin ); ?>" size="30" />
-	</div>
-	<div>
-		<label style="width:150px;" for="speaker-facebook">Facebook</label>
-		<input type="text" name="speaker-facebook" id="speaker-facebook" value="<?php echo esc_attr( $speaker_facebook ); ?>" size="30" />
-	</div>
+
 	<?php
 }
 
