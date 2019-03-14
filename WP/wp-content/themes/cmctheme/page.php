@@ -35,15 +35,23 @@ $cmcstats = get_field('stats');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="imageRow">
-        <img src="<?php echo $mainevent['image']['url'];?>">
+        <?php echo '<img src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($mainevent["event"]->ID)["event_image"][0])["_wp_attached_file"][0].'">';?>
         </div>
-        <div class="eventInfo">
-        <h1 class="title"><?php echo $mainevent['title'];?></h1>
-        <p class="eventDesc"><?php echo $mainevent['description'];?></p>
+        <div class="eventInfo">          
+        <h1 class="title"><?php echo get_post_custom($mainevent["event"]->ID)['event_title'][0];?></h1>
+        <p class="eventDesc"><?php echo get_post_custom($mainevent["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $mainevent['date'];?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $mainevent['start_time'];?> - <?php echo $mainevent['end_time'];?></span>
-          <div class="learnEvent"><?php echo $mainevent['button'];?></div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($mainevent["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($mainevent["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($mainevent["event"]->ID)['event_end_time'][0];?></span>
+          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
+          if(strtotime(get_post_custom($mainevent["event"]->ID)['event_date'][0]) < time()){
+              echo "417";
+                }
+                else{
+                  echo '374';
+                }
+          echo '&info_id='.$mainevent["event"]->ID.'">'?><?php echo $mainevent['button'];?>
+        </a></div>
         </div>
       </div>
       </div>
@@ -54,12 +62,20 @@ $cmcstats = get_field('stats');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="eventInfo">
-        <h1 class="title"><?php echo $subevent1['title'];?></h1>
-        <p class="eventDesc"><?php echo $subevent1['description'];?></p>
+        <h1 class="title"><?php echo get_post_custom($subevent1["event"]->ID)['event_title'][0];?></h1>
+        <p class="eventDesc"><?php echo get_post_custom($subevent1["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $subevent1['date'];?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $subevent1['start_time'];?> - <?php echo $subevent1['end_time'];?></span>
-          <div class="learnEvent"><?php echo $subevent1['button'];?></div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($subevent1["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent1["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent1["event"]->ID)['event_end_time'][0];?></span>
+          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
+          if(strtotime(get_post_custom($subevent1["event"]->ID)['event_date'][0]) < time()){
+              echo "417";
+                }
+                else{
+                  echo '374';
+                }
+          echo '&info_id='.$subevent1["event"]->ID.'">'?><?php echo $subevent1['button'];?>
+        </a></div>
         </div>
       </div>
       </div>
@@ -68,12 +84,20 @@ $cmcstats = get_field('stats');
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="eventInfo">
-        <h1 class="title"><?php echo $subevent2['title'];?></h1>
-        <p class="eventDesc"><?php echo $subevent2['description'];?></p>
+        <h1 class="title"><?php echo get_post_custom($subevent2["event"]->ID)['event_title'][0];?></h1>
+        <p class="eventDesc"><?php echo get_post_custom($subevent2["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i><?php echo $subevent2['date'];?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo $subevent2['start_time'];?> - <?php echo $subevent2['end_time'];?></span>
-          <div class="learnEvent"><?php echo $subevent2['button'];?></div>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($subevent2["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent2["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent2["event"]->ID)['event_end_time'][0];?></span>
+          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
+          if(strtotime(get_post_custom($subevent2["event"]->ID)['event_date'][0]) < time()){
+              echo "417";
+                }
+                else{
+                  echo '374';
+                }
+          echo '&info_id='.$subevent2["event"]->ID.'">'?><?php echo $subevent2['button'];?>
+        </a></div>
         </div>
       </div>
       </div>
@@ -99,7 +123,7 @@ $cmcstats = get_field('stats');
 <?php the_field('under_archive_title');?>
     </div>
     <div class="statsContainer">
-    <div class="statVideo"></div>
+    <div class="statVideo"><iframe width="560" height="315" src="<?php the_field('stats_video');?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
     <div class="statText"><h1><?php echo $cmcstats['title'];?></h1>
       <div class="innerContainer">
 <div class="membersStat stat"><i class="fa fa-users"></i><span><?php echo $cmcstats['members'];?></span>

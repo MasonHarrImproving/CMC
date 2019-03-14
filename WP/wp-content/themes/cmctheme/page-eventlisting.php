@@ -20,7 +20,6 @@
     );
     
     $eventsquery = new WP_Query($events);
-    var_dump(home_url());
 ?>
 
       <?php

@@ -19,8 +19,9 @@
     $speakers = [];
 
             for($i=1; $i<5; $i++) {
-              if($post["speakers_speaker_".$i][0]){
-                array_push($speakers, $post["speakers_speaker_".$i][0]);;
+              if(isset($post["speakers_speaker_".$i][0])){
+                array_push($speakers, $post["speakers_speaker_".$i][0]);
+                
               }
             }
 ?>
@@ -33,13 +34,13 @@
         <div class="pastEventDesc">
           <div class="pastEventUpperDetails">
    <div class="leftSideArchive">
-    <span class="archiveEventDate archiveInfo"><i class="fa fa-calendar-o"></i> <?php echo $post["event_date"][0]?></span>
-       <div class="archiveEventTime archiveInfo"><i class="fa fa-clock-o"></i> <?php echo $post["event_start_time"][0]?> - <?php echo $post["event_end_time"][0]?></div>
-       <div class="archiveEventLocation archiveInfo"><i class="fa fa-map-pin"></i> <?php echo $post["event_location"][0]?><br><?php echo $post["event_street"][0]?><br><?php echo $post["event_city"][0]?></div>
+    <span class="archiveEventDate archiveInfo"><?php if(strlen($post["event_date"][0]) > 0){ echo '<i class="fa fa-calendar-o"></i>'.$post["event_date"][0];}?></span>
+       <div class="archiveEventTime archiveInfo"><?php if(strlen($post["event_start_time"][0]) > 0){ echo '<i class="fa fa-clock-o"></i>'.$post["event_start_time"][0].'-'.$post["event_end_time"][0]; }?></div>
+       <div class="archiveEventLocation archiveInfo"><?php if(strlen($post["event_location"][0]) > 0){ echo '<i class="fa fa-map-pin"></i>'.$post["event_location"][0].'<br>'.$post["event_street"][0].'<br>'.$post["event_city"][0]; }?></div>
     </div>
      <div class="rightSideArchive">
-    <span class="archiveEventPrice archiveInfo"><i class="fa fa-ticket"></i> <?php echo $post["event_member_price"][0]?> for members<br> <?php echo $post["event_guest_price"][0]?> for guests</span>
-       <div class="archiveEventFood archiveInfo"><i class="fa fa-spoon"></i> <?php echo $post["event_food_choices"][0]?></div>
+    <span class="archiveEventPrice archiveInfo"><?php if(strlen($post["event_member_price"][0]) > 0){ echo '<i class="fa fa-ticket"></i>'.$post["event_member_price"][0].' for members<br>'.$post["event_guest_price"][0].' for guests'; }?></span>
+       <div class="archiveEventFood archiveInfo"><?php if(strlen($post["event_food_choices"][0]) > 0){ echo '<i class="fa fa-spoon"></i>'.$post["event_food_choices"][0];}?></div>
     </div>
           </div>
       <div class="pastEventLowerDetails">
@@ -50,7 +51,7 @@
 <div class="upcomingEvents">
   <div><h1>This event has ended</h1></div>
   <div>But dont worry, we have new forum each week</div>
-  <div class="moreEventsBtn"><a class="eventsListingLink" href="">View Upcoming events</a></div>
+  <div class="moreEventsBtn"><a class="eventsListingLink" href="<?php echo home_url().'?page_id=348';?>">View Upcoming events</a></div>
 </div>
 <div class="upcomingEvents">
 <h1 class="followText">Follow On Social Media</h1>
@@ -65,25 +66,42 @@
     <section class="boardContainer mainElement">
       <?php
                   for($m=0; $m<count($speakers); $m++) {
+                    if(strlen($speakers[$m]) === 0){
+
+                    }
+                    else{
                           echo '<div class="member">
         <a href="'.home_url().'?page_id=355&speaker_id='.$speakers[$m].'"><img class="memberImage" src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($speakers[$m])["image"][0])["_wp_attached_file"][0].'" height="250" width="200"></a>
         <span class="memberName">'.get_post_custom($speakers[$m])["name"][0].'<br></span>
         <span class="memberDesc">'.get_post_custom($speakers[$m])["title"][0].'<br>'.get_post_custom($speakers[$m])["subtitle"][0].'</span>
       </div>';
+    }
                 }
                 ?>
     </section>
         <div class="pressCoverage">
-      <h1> Press Coverage Of The Forum</h1>
-      <div class="pressCoveredEvent"><a href="#">Test Event 1</a><span>Columbus Dispatch on March 18th, 2018</span></div>
-      <div class="pressCoveredEvent"><a href="#">Test Event 2</a><span>The Daily Reporter on March 19th, 2018</span></div>
-    </div>
-    <div class="featuredEventVideo">
-      <h1>Video Text</h1>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DQuhA5ZCV9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+          <?php if($post["press_coverage_title_1"][0]){
+      echo '<h1> Press Coverage Of The Forum</h1>';
+                }
+          ?>
+          <?php for($d=1; $d<3; $d++){
+     echo '<div class="pressCoveredEvent">
+      <a href="'.$post["press_coverage_link_".$d][0].'">'.$post["press_coverage_title_".$d][0].'</a><span>'.$post["press_coverage_desc_".$d][0].'</span></div>';
 
+          }
+          ?>
+    </div>
+              <?php if($post["video_link"][0]){
+    echo '<div class="featuredEventVideo">
+      <h1>'.$post["video_name"][0].'</h1>
+      <iframe width="560" height="315" src="'.$post["video_link"][0].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>';
+  }
+    ?>
     </section>
+<?php 
+echo do_shortcode('[gdgallery_gallery id_gallery="2"]'); 
+?>
 
 <?php
     get_footer();

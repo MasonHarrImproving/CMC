@@ -337,8 +337,25 @@ textarea {
 	margin-top: 100px;
 	font-family: 'Nunito Sans', sans-serif;
 }
+.frequentMainText{
+	cursor:pointer;
+	margin:10px;
+}
 .frequentFeatureText {
 	color: #999999;
+	display:block;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.frequentQuestionsPage h1{
+	width: calc(100% - 40px);
+	padding:20px;
+	text-align: center;
+}
+
+.answerDrop{
+	display:block;
 }
 .frequentContainer {
 	padding: 50px;
@@ -757,7 +774,8 @@ textarea {
 	display: inline-block;
 }
 .pressCoverage {
-	display: inline-flex;
+	display: flex;
+    margin: auto;
 	flex-wrap: wrap;
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -767,6 +785,10 @@ textarea {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
+}
+.statVideo iframe{
+	width: 100%;
+    min-height: 500px;
 }
 .pressCoveredEvent {
 	display: inline-block;
@@ -851,6 +873,15 @@ textarea {
 }
 .eventPartners img {
 	max-height: 110px;
+}
+
+.eventSponsor a {
+	max-height: 110px;
+	width:100%;
+}
+.eventPartners a {
+	max-height: 110px;
+	width:100%;
 }
 .eventPartners, .eventSponsor {
 	display: inline-flex;
@@ -1043,7 +1074,6 @@ textarea {
 	min-height: 500px;
 	width: calc(50% - 40px);
 	margin: 20px;
-	background-color: #333333;
 }
 .statText {
 	width: calc(50% - 40px);

@@ -19,8 +19,9 @@
     $speakers = [];
 
             for($i=1; $i<5; $i++) {
-              if($post["speakers_speaker_".$i][0]){
-                array_push($speakers, $post["speakers_speaker_".$i][0]);;
+              if(isset($post["speakers_speaker_".$i][0])){
+                array_push($speakers, $post["speakers_speaker_".$i][0]);
+                
               }
             }
 ?>
@@ -33,13 +34,13 @@
         <div class="pastEventDesc">
           <div class="pastEventUpperDetails">
    <div class="leftSideArchive">
-    <span class="archiveEventDate archiveInfo"><i class="fa fa-calendar-o"></i> <?php echo $post["event_date"][0]?></span>
-       <div class="archiveEventTime archiveInfo"><i class="fa fa-clock-o"></i> <?php echo $post["event_start_time"][0]?> - <?php echo $post["event_end_time"][0]?></div>
-       <div class="archiveEventLocation archiveInfo"><i class="fa fa-map-pin"></i> <?php echo $post["event_location"][0]?><br><?php echo $post["event_street"][0]?><br><?php echo $post["event_city"][0]?></div>
+    <span class="archiveEventDate archiveInfo"><?php if(strlen($post["event_date"][0]) > 0){ echo '<i class="fa fa-calendar-o"></i>'.$post["event_date"][0];}?></span>
+       <div class="archiveEventTime archiveInfo"><?php if(strlen($post["event_start_time"][0]) > 0){ echo '<i class="fa fa-clock-o"></i>'.$post["event_start_time"][0].'-'.$post["event_end_time"][0]; }?></div>
+       <div class="archiveEventLocation archiveInfo"><?php if(strlen($post["event_location"][0]) > 0){ echo '<i class="fa fa-map-pin"></i>'.$post["event_location"][0].'<br>'.$post["event_street"][0].'<br>'.$post["event_city"][0]; }?></div>
     </div>
      <div class="rightSideArchive">
-    <span class="archiveEventPrice archiveInfo"><i class="fa fa-ticket"></i> <?php echo $post["event_member_price"][0]?> for members<br> <?php echo $post["event_guest_price"][0]?> for guests</span>
-       <div class="archiveEventFood archiveInfo"><i class="fa fa-spoon"></i> <?php echo $post["event_food_choices"][0]?></div>
+    <span class="archiveEventPrice archiveInfo"><?php if(strlen($post["event_member_price"][0]) > 0){ echo '<i class="fa fa-ticket"></i>'.$post["event_member_price"][0].' for members<br>'.$post["event_guest_price"][0].' for guests'; }?></span>
+       <div class="archiveEventFood archiveInfo"><?php if(strlen($post["event_food_choices"][0]) > 0){ echo '<i class="fa fa-spoon"></i>'.$post["event_food_choices"][0];}?></div>
     </div>
           </div>
       <div class="pastEventLowerDetails">
@@ -70,41 +71,50 @@
     <section class="boardContainer mainElement">
       <?php
                   for($m=0; $m<count($speakers); $m++) {
+                    if(strlen($speakers[$m]) === 0){
+
+                    }
+                    else{
                           echo '<div class="member">
         <a href="'.home_url().'?page_id=355&speaker_id='.$speakers[$m].'"><img class="memberImage" src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($speakers[$m])["image"][0])["_wp_attached_file"][0].'" height="250" width="200"></a>
         <span class="memberName">'.get_post_custom($speakers[$m])["name"][0].'<br></span>
         <span class="memberDesc">'.get_post_custom($speakers[$m])["title"][0].'<br>'.get_post_custom($speakers[$m])["subtitle"][0].'</span>
       </div>';
+    }
                 }
                 ?>
     </section>
 <div class="eventSponsorBox">
-      <div class="eventSponsor">
-        <h1>Sponsors</h1>
-        <?php
+    <?php if(strlen($post["sponsor_1"][0]) > 0){
+echo '<div class="eventSponsor">
+        <h1>Sponsors</h1>';
         for($n=1; $n<3; $n++) {
           if($post["sponsor_".$n][0]){
-        echo '<img src="'.home_url().'/wp-content/uploads/'.get_post_custom($post["sponsor_".$n][0])["_wp_attached_file"][0].'">';
+        echo '<a href="'.$post["sponsor_link_1"][0].'"><img src="'.home_url().'/wp-content/uploads/'.get_post_custom($post["sponsor_".$n][0])["_wp_attached_file"][0].'"></a>';
       }
       }
+          echo '</div>';
+    }
       ?>
-      </div>
-      <div class="eventPartners">
-        <h1>Partnering Organizations</h1>
-        <?php
+          <?php if(strlen($post["sponsor_1"][0]) > 0){
+echo '<div class="eventPartners">
+        <h1>Partnering Organizations</h1>';
         for($n=1; $n<3; $n++) {
           if($post["partner_".$n][0]){
-        echo '<img src="'.home_url().'/wp-content/uploads/'.get_post_custom($post["partner_".$n][0])["_wp_attached_file"][0].'">';
+        echo '<a href="'.$post["partner_link_1"][0].'"><img src="'.home_url().'/wp-content/uploads/'.get_post_custom($post["partner_".$n][0])["_wp_attached_file"][0].'"></a>';
       }
       }
+                echo '</div>';
+              }
       ?>
-      </div>
     </div>
-    <div class="centeredBodyTextContainer">
-      <h1><?php echo $post["bottom_title"][0]?></h1>
-      <p><?php echo $post["bottom_description"][0] ?></p>
-      <div class="learnMore"><?php echo $post["bottom_learn_more"][0] ?></div>
-    </div>
+    <?php if(strlen($post["bottom_title"][0]) > 0){
+    echo '<div class="centeredBodyTextContainer">
+      <h1>'.$post["bottom_title"][0].'</h1>
+      <p>'.$post["bottom_description"][0].'</p>
+      <div class="learnMore">'.$post["bottom_learn_more"][0].'</div>
+    </div>';
+  }?>
     <div class="hiddenSocial">
             <div class="attendanceContainer hiddenAttendance">
     <h2>Cant Attend?</h2>
