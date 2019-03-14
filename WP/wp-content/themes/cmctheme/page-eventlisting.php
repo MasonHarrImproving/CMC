@@ -20,12 +20,20 @@
     );
     
     $eventsquery = new WP_Query($events);
+    var_dump(home_url());
 ?>
 
       <?php
     if ($eventsquery -> have_posts()) {
         $posts = $eventsquery->posts;
         foreach($posts as $post) {
+          $pagetype = "";
+          if(strtotime(get_post_custom($post->ID)['event_date'][0]) < time()){
+            $pagetype = "417";
+          }
+          else{
+            $pagetype = "374";
+          }
     echo '<section class="eventListing">
       <div class="eventContainer">
         <div class="greenBar"></div>
@@ -38,7 +46,8 @@
         <div class="bottomInfo">
           <span class="bottomEventDate"><i class="fa fa-calendar"></i> '.get_post_custom($post->ID)['event_date'][0].'</span>
           <span class="bottomEventTime"><i class="fa fa-clock-o"></i> '.get_post_custom($post->ID)['event_start_time'][0].' - '.get_post_custom($post->ID)['event_end_time'][0].'</span>
-          <div class="learnEvent">'.get_post_custom($post->ID)['learn_more_button'][0].'</div>
+          <span class="bottomEventLocation"><i class="fa fa-map-pin"></i> '.get_post_custom($post->ID)['event_location'][0].'</span>
+          <div class="learnEvent"><a href="'. home_url().'?page_id='.$pagetype.'&info_id='.$post->ID.'">'.get_post_custom($post->ID)['learn_more_button'][0].'</a></div>
         </div>
       </div>
       </div>

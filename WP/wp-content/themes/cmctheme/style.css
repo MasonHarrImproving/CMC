@@ -637,6 +637,17 @@ textarea {
 	float: right;
 	text-align: center;
 }
+
+.learnEvent a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.speakerEvents a{
+	text-decoration:none;
+	color:inherit;
+}
+
 .bottomEventTime, .bottomEventLocation {
 	margin: 15px;
 }
@@ -730,6 +741,7 @@ textarea {
 .upcomingEvents i {
 	color: #01486C;
 }
+
 .pastEventSocial {
 	color: #999999;
 }
@@ -1170,6 +1182,11 @@ textarea {
 .addressBox .boxHeader{
 	   color: #bec1c0;
     font-size: 18px;
+}
+
+.moreEventsBtn a{
+	color:inherit;
+	text-decoration: none;
 }
 @media screen and (max-width:1075px) {
 	.socialContainer i {

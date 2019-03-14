@@ -14,33 +14,60 @@
     get_template_part('template-parts/shared/content-hero');
 ?>
 
+<?php 
+$speaker = get_post_custom($_GET['speaker_id']);
+
+?>
 <section class="memberBio mainElement">
       <div class="bio">
-        <h1 class="hiddenUpper bioName">Scott Light</h1>
-           <p class="hiddenUpper bioNameDesc">Anchor,TV</p>
-        <div class="bioThumbnail"><img class="profilePic" src="name.jpg">
+        <h1 class="hiddenUpper bioName"><?php echo $speaker["name"][0]?></h1>
+           <p class="hiddenUpper bioNameDesc"><?php echo $speaker["title"][0]?> , <?php echo $speaker["subtitle"][0]?></p>
+        <div class="bioThumbnail">
+          <?php echo '<img class="profilePic" src="'.home_url().'/wp-content/uploads/'.get_post_custom($speaker["image"][0])["_wp_attached_file"][0].'">';
+          ?>
           <div class="bioSocialBox">
             <div class="bioSocialInnerBox">
       <p class="followOn"> Follow on social media</p>
-      <p class="bioTwitter"><i class="fa fa-twitter"></i> @spotlight10tv</p>
-      <p class="bioTwitter"><i class="fa fa-twitter"></i> @10TV</p>
-      <p class="bioInstagram"><i class="fa fa-instagram"></i> @wbns10tv</p>
-      <p class="bioFacebook"><i class="fa fa-facebook"></i> @ScottLightWBNS10TV</p>
-      <p class="bioFacebook"><i class="fa fa-facebook"></i> @WBNS10TV</p>
+      <?php if($speaker["social_media_twitter_1"][0]){
+        echo'<p class="bioTwitter"><i class="fa fa-twitter"></i> '.$speaker["social_media_twitter_1"][0].'</p>';
+      }
+      ?>
+      <?php if($speaker["social_media_twitter_2"][0]){
+        echo'<p class="bioTwitter"><i class="fa fa-twitter"></i> '.$speaker["social_media_twitter_2"][0].'</p>';
+      }
+      ?>
+      <?php if($speaker["social_media_instagram_1"][0]){
+        echo'<p class="bioInstagram"><i class="fa fa-instagram"></i> '.$speaker["social_media_instagram_1"][0].'</p>';
+      }
+      ?>
+      <?php if($speaker["social_media_instagram_2"][0]){
+        echo'<p class="bioInstagram"><i class="fa fa-instagram"></i> '.$speaker["social_media_instagram_2"][0].'</p>';
+      }
+      ?>
+      <?php if($speaker["social_media_facebook_1"][0]){
+        echo'<p class="bioFacebook"><i class="fa fa-facebook"></i> '.$speaker["social_media_facebook_1"][0].'</p>';
+      }
+      ?>
+      <?php if($speaker["social_media_facebook_2"][0]){
+        echo'<p class="bioFacebook"><i class="fa fa-facebook"></i> '.$speaker["social_media_facebook_2"][0].'</p>';
+      }
+      ?>
     </div>
   </div>
         </div>
         <div class="bioDesc">
-          <h1 class="bioName">Scott Light</h1>
-           <p class="bioNameDesc">Anchor,TV</p>
-          <p class="memberDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta. Nunc id cursus metus aliquam. Ullamcorper sit amet risus nullam eget felis eget nunc. Sed vulputate mi sit amet mauris commodo quis imperdiet. Bibendum est ultricies integer quis auctor elit sed. Leo a diam sollicitudin tempor id eu nisl nunc. Bibendum arcu vitae elementum curabitur vitae nunc sed. In hac habitasse platea dictumst vestibulum rhoncus est. Dui accumsan sit amet nulla. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Consectetur purus ut faucibus pulvinar. Netus et malesuada fames ac turpis. Enim nulla aliquet porttitor lacus luctus accumsan. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ut aliquam purus sit amet. Eget nulla facilisi etiam dignissim diam. Ac placerat vestibulum lectus mauris ultrices eros. Congue mauris rhoncus aenean vel elit scelerisque mauris. Nisl nunc mi ipsum faucibus vitae. Lectus proin nibh nisl condimentum id. Malesuada pellentesque elit eget gravida cum. In metus vulputate eu scelerisque felis imperdiet proin. Interdum velit euismod in pellentesque massa placerat duis. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Purus ut faucibus pulvinar elementum integer. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Vel pharetra vel turpis nunc eget lorem. Nunc vel risus commodo viverra maecenas accumsan. Montes nascetur ridiculus mus mauris vitae. Nulla facilisi etiam dignissim diam quis. Elementum pulvinar etiam non quam lacus. Magna etiam tempor orci eu. Aliquam malesuada bibendum arcu vitae elementum curabitur. Tortor posuere ac ut consequat semper viverra nam. Fringilla urna porttitor rhoncus dolor purus non enim praesent.
-            <br>
-            <br>
-          Netus et malesuada fames ac turpis. Enim nulla aliquet porttitor lacus luctus accumsan. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ut aliquam purus sit amet. Eget nulla facilisi etiam dignissim diam. Ac placerat vestibulum lectus mauris ultrices eros. Congue mauris rhoncus aenean vel elit scelerisque mauris. Nisl nunc mi ipsum faucibus vitae. Lectus proin nibh nisl condimentum id. Malesuada pellentesque elit eget gravida cum. In metus vulputate eu scelerisque felis imperdiet proin. Interdum velit euismod in pellentesque massa placerat duis. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Purus ut faucibus pulvinar elementum integer. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Vel pharetra vel turpis nunc eget lorem. Nunc vel risus commodo viverra maecenas accumsan. Montes nascetur ridiculus mus mauris vitae. Nulla facilisi etiam dignissim diam quis. Elementum pulvinar etiam non quam lacus. Magna etiam tempor orci eu. Aliquam malesuada bibendum arcu vitae elementum curabitur. Tortor posuere ac ut consequat semper viverra nam. Fringilla urna porttitor rhoncus dolor purus non enim praesent.
+          <h1 class="bioName"><?php echo $speaker["name"][0];?></h1>
+           <p class="bioNameDesc"><?php echo $speaker["title"][0];?> , <?php echo $speaker["subtitle"][0];?></p>
+          <p class="memberDesc"><?php echo $speaker["bio"][0]; ?>
           </p>
           <div class="speakerEvents">
-            <h1 >Spearkers Events</h1>
-            <p>Hear Me Now: Bullying, Cyberbullying and Our Children.</p>
+            <h1>Speakers Events</h1>
+            <?php 
+            for($i=1; $i<7; $i++){
+              if($speaker["event_".$i][0]){
+                echo '<p><a class="associatedEvents" href="'.home_url().'?page_id=374&info_id='.$speaker["event_".$i][0].'">'.get_post_custom($speaker["event_".$i][0])["event_title"][0].'</a></p>';              }
+            }
+            ?>
           </div>
         </div>
       </div>
