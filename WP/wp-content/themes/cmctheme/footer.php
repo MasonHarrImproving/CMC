@@ -10,6 +10,7 @@
  * @subpackage Columbus_Metropolitan_Club_Theme
  * @since 1.0.0
  */
+wp_footer();
 
 ?>
      <div class="spacing"></div>
@@ -36,4 +37,12 @@
     <div></div>
   </div>
 </body>
+   <script>
+      $('.navText').hover(function(){
+        $(this).children('.nav-dropdown').css('display', 'block');
+        $(this).mouseleave(function(){
+          //$(this).children('.nav-dropdown').css('display', 'none');
+        });
+      });
+    </script>
 </html>

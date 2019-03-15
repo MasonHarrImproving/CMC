@@ -168,9 +168,12 @@ $cmcstats = get_field('stats');
       </div>
     </div>
       <div class="moreSponsorsContainer">
+        <?php echo '<a href="'.home_url().'?page_id='.'33'.'">';?>
   <div class="moreSponsors">
-    <?php the_field('more_sponsors_button');?>
+       <?php
+       the_field('more_sponsors_button');?>
     </div>
+  </a>
   </div>
     </section>
 

@@ -99,10 +99,13 @@
   }
     ?>
     </section>
+    <section class="archiveImageGallery">
 <?php 
-echo do_shortcode('[gdgallery_gallery id_gallery="2"]'); 
+if(isset($post["image_gallery"][0])){
+echo do_shortcode('[modula id="'.$post["image_gallery"][0].'"]'); 
+}
 ?>
-
+</section>
 <?php
     get_footer();
 ?>

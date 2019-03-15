@@ -11,7 +11,8 @@
  * @since 1.0.0
  */
 ?><!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); 
+?>>
 <head>
     <meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,7 +29,13 @@
   			<li class="navText">About</li>
   			<li class="navText">Community Conversations</li>
   			<li class="navText">Connections</li>
-  			<li class="navText">Events</li>
+  			<li class="navText">Events
+<div class="nav-dropdown">
+    <a href="<?php echo home_url().'?page_id='.'348'; ?>">Upcoming Events</a>
+    <a href="#">Events Archive</a>
+    <a href="<?php echo home_url().'?page_id='.'220'; ?>">Event FAQs</a>
+  </div>
+        </li>
 			</ul>
 			<a href="<?php home_url() ?>"><img src="<?php bloginfo('template_url') ?>/images/cmc-logo-full.png" alt=""  height="55px" width="140px"></a>
   		<!-- <img class="mainLogo" src="cmclogo.png" height="55px" width="140px"> -->
@@ -48,3 +55,4 @@
   		</div>
   		</div>
   	</div>
+
