@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Sponsor Benefit Template
+    Template Name: Member Benefit Template
 */
     get_header();
 ?>
@@ -82,7 +82,7 @@
 <section class="sponsorsBenefits mainElement">
       <div class="sponsorContactContainer">
         <p class="sponsorContactDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Ultrices eros in cursus turpis massa. Risus ultricies tristique nulla aliquet enim tortor. Eu augue ut lectus arcu bibendum at varius vel pharetra. Quis ipsum suspendisse ultrices gravida dictum. Orci sagittis eu volutpat odio facilisis mauris sit amet. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Diam maecenas ultricies mi eget mauris pharetra. Aliquet eget sit amet tellus cras. Ornare arcu dui vivamus arcu felis. Libero id faucibus nisl tincidunt eget nullam non nisi est. Pulvinar etiam non quam lacus. Elit duis tristique sollicitudin nibh sit. Non nisi est sit amet facilisis. Pharetra convallis posuere morbi leo urna. Sit amet porttitor eget dolor morbi.</p>
-        <div class="sponsorContactBtn">Contact Us To Discuss Sponsorship</div>
+        <div class="sponsorContactBtn">Contact Us To Discuss Membership</div>
 
       <div class="sponsorUpperBenefits">
         <div class="diamond sponsorBox">
@@ -90,13 +90,13 @@
           <p class="sponsorType">DIAMOND</p>
           <?php 
        if ($diamondquery->have_posts() ) {
+        if(isset(get_post_custom($post->ID)['member'])){
             $diamondposts = $diamondquery->posts;
         foreach($diamondposts as $post) {
-          if(!isset(get_post_custom($post->ID)['member'])){
        echo '<span>'.$post->post_title.'</span>';
    }
- }
    wp_reset_postdata();
+ }
  }
    ?>
       </div>
@@ -105,9 +105,9 @@
           <p class="sponsorType">PLATINUM</p>
         <?php 
                if ($platinumquery->have_posts() ) {
+                if(isset(get_post_custom($post->ID)['member'])){
                     $platinumposts = $platinumquery->posts;
                 foreach($platinumposts as $post) {
-                  if(!isset(get_post_custom($post->ID)['member'])){
                echo '<span>'.$post->post_title.'</span>';
            }
            wp_reset_postdata();
@@ -124,10 +124,11 @@
        if ($goldquery->have_posts() ) {
             $goldposts = $goldquery->posts;
         foreach($goldposts as $post) {
-          if(!isset(get_post_custom($post->ID)['member'])){
+if(isset(get_post_custom($post->ID)['member'])){
        echo '<span>'.$post->post_title.'</span>';
-           }
+           
            wp_reset_postdata();
+         }
          }
             }
               ?>
@@ -137,11 +138,13 @@
           <p class="sponsorType">SILVER</p>
           <?php 
                  if ($silverquery->have_posts() ) {
+                  if(isset(get_post_custom($post->ID)['member'])){
                       $silverposts = $silverquery->posts;
                   foreach($silverposts as $post) {
                  echo '<span>'.$post->post_title.'</span>';
-             }
+               }
              wp_reset_postdata();
+           }
            }
              ?>
       </div>
@@ -150,13 +153,13 @@
           <p class="sponsorType">BRONZE</p>
           <?php 
        if ($bronzequery->have_posts() ) {
+        if(isset(get_post_custom($post->ID)['member'])){
             $bronzeposts = $bronzequery->posts;
         foreach($bronzeposts as $post) {
-          if(!isset(get_post_custom($post->ID)['member'])){
        echo '<span>'.$post->post_title.'</span>';
            }
-         }
            wp_reset_postdata();
+         }
         }
               ?>
       </div>

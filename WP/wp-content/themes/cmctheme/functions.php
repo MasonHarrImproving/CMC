@@ -276,6 +276,7 @@ require get_template_directory() . '/custom-types/speaker/functions.php';
 require get_template_directory() . '/custom-types/questions/functions.php';
 require get_template_directory() . '/custom-types/benefits/functions.php';
 require get_template_directory() . '/custom-types/event/functions.php';
+require get_template_directory() . '/custom-types/members/functions.php';
 
 /**
  * SVG Icons class.

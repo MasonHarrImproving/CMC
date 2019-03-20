@@ -15,11 +15,15 @@
 ?>
 
 <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $events = array(
         'post_type' => 'event',
+        'posts_per_page' => 2,
+        'paged' => $paged,
     );
     
     $eventsquery = new WP_Query($events);
+    $wp_query = new WP_Query($events);
 ?>
 
       <?php
@@ -33,6 +37,7 @@
           else{
             $pagetype = "374";
           }
+
     echo '<section class="eventListing">
       <div class="eventContainer">
         <div class="greenBar"></div>
@@ -52,8 +57,17 @@
       </div>
     </section>';
         }
-      }
-      ?>
+        ?> 
+        <div class="pagedPostContainer">
+        <?php if(get_previous_posts_link('Previous Events')){
+          echo '<div class="pagedPosts">'.get_previous_posts_link("Previous Events").'</div>';
+        }?>
+      <?php if(get_next_posts_link('Next Events')){
+        echo '<div class="pagedPosts">'.get_next_posts_link("Next Events").'</div>';
+         }
+         ?>
+        </div>
+      <?php }?>
 <?php
     get_footer();
 ?>

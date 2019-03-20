@@ -38,11 +38,19 @@ wp_footer();
   </div>
 </body>
    <script>
+
       $('.navText').hover(function(){
         $(this).children('.nav-dropdown').css('display', 'block');
-        $(this).mouseleave(function(){
-          //$(this).children('.nav-dropdown').css('display', 'none');
+        $(this).find('.innerDropdown').mouseleave(function(){
+          $(this).children('.nav-dropdown').css('display', 'none');
         });
       });
+
+      $('.hamburgerMenu').click(function(){
+        console.log('test');
+        $('.fullMenu').fadeToggle();
+        $('.fullMenu').css('display', 'flex');
+      });
+
     </script>
 </html>

@@ -56,9 +56,10 @@ body, html {
 .navText {
 	list-style: none;
 	margin: 10px;
-	display: inline-block;
+	display: block;
 	cursor: pointer;
 }
+
 .contactBox, .addressBox, .logoBox, .searchBox {
 	max-width: 200px;
 	margin-right: 35px;
@@ -79,7 +80,6 @@ body, html {
 .navImg {
 	list-style: none;
 	font-size: 25px;
-	padding-top: 5px;
 	color: white;
 	margin-right: 15px;
 	cursor: pointer;
@@ -108,6 +108,16 @@ body, html {
 	margin: auto;
 	font-size: 18px;
 	font-weight: 200;
+}
+
+.heroImageArea{
+	    z-index: 1;
+    position: relative;
+}
+
+nav{
+	    z-index: 2;
+    position: relative;
 }
 .heroImageArea h1 {
 	font-size: 28px;
@@ -339,7 +349,7 @@ textarea {
 }
 .frequentMainText{
 	cursor:pointer;
-	margin:10px;
+	margin:50px;
 }
 .frequentFeatureText {
 	color: #999999;
@@ -522,6 +532,7 @@ textarea {
 	max-width: 50%;
 	min-width:50%;
 	display: inline-block;
+	margin: auto;
 }
 .sponsorLowerBenefits .sponsorBox {
 	width: calc(33% - 20px);
@@ -640,7 +651,7 @@ textarea {
 	width: 100%;
 	float: left;
 	font-weight: 400;
-	display: inline-flex;
+	display: inline-block;
 }
 .bottomInfo i {
 	color: #016C5B;
@@ -1238,6 +1249,11 @@ textarea {
   text-align:center;
 }
 
+.nav-dropdown .navText{
+	width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
 .nav-dropdown a{
 	color: #999999;
     text-decoration: none;
@@ -1248,6 +1264,193 @@ textarea {
 
 .nav-dropdown a:hover{
 		background-color: rgba(0, 0, 0, .3);
+}
+
+.innerDropdown{
+	width: 100%;
+    box-shadow: none;
+    position: relative;
+    display: block;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+    background-color: #515151;
+    border-top: 1px solid #9b9793;
+    border-bottom: 1px solid #9b9793;
+
+}
+.moreEvents a{
+	text-decoration: none;
+	color:inherit;
+}
+
+.pagedPostContainer{
+    display: flex;
+    width: 180px;
+    margin: auto;
+    flex-wrap: wrap;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 50px;
+}
+
+.pagedPosts{
+    display: inline-flex;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    width: calc(100% - 40px);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.pagedPosts a{
+    text-decoration: none;
+    color: black;
+    margin: auto;
+}
+
+nav{
+	height:70px;
+	background-color: #333333;
+	display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mainMenu{
+	    color: #999999;
+    background-color: #333333;
+    height:100%;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: auto;
+}
+
+nav a{
+    margin: 0;
+    text-align: center;
+    padding: 12px 15px 12px 15px;
+    background-color: #333333;
+    display: block;
+    color: #999999;
+    font-weight:400;
+    font-size:15px;
+
+    text-decoration: none;
+}
+
+nav .socialContainer{
+	display: flex;
+    align-items: center;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.navTextGroup{
+	display: flex;
+}
+
+.navLogoContainer{
+	    display: inline-flex;
+	    align-items: center;
+	    width: 25%;
+	    margin: auto;
+}
+.navLogo{
+	height:55px;
+	width:144px;
+}
+
+.navLogoContainer a{
+	padding:0;
+	margin: auto;
+}
+
+ nav .mainMenu>li{
+    display: inline-block;
+    margin-left: -5px;
+}
+nav li:hover>a{
+    background: #4B545F;
+    cursor: pointer;
+}
+nav .subMenu{
+    position: absolute;
+    display: none;
+    color: #999999;
+    background-color: #333333;
+}
+nav .subMenu li{
+    border-top: 1px solid #575F6A;
+    border-bottom: 1px solid #6B727C;
+    position: relative;
+}
+nav .mainMenu>li:hover .subMenu{
+    display: block;
+}
+nav .SuperSubMenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    -ms-transform: translate(100%,0);
+    -webkit-transform: translate(100%,0);
+    transform:translate(100%,0);
+    display: none;
+}
+nav .subMenu li:hover>.SuperSubMenu{
+    display: block;
+}
+
+.menuLine{
+    width: 35px;
+    height: 3px;
+    background-color: #999999;
+    margin: 6px 0;
+}
+
+.fullMenu{
+	width: 100%;
+    background-color: #333333;
+    height: 600px;
+    z-index: 1000;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    display: flex;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.fullMenu a{
+	text-decoration: none;
+	color:inherit;
+}
+
+.fullMenuSelection{
+	    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    margin-top: 10px;
+}
+
+.fullMenuSelection a{
+	text-align:center;
+}
+
+.hamburgerMenu,.fullMenu{
+	display:none;
 }
 @media screen and (max-width:1075px) {
 	.socialContainer i {
@@ -1292,6 +1495,30 @@ textarea {
 		font-size: 18px;
 		margin-right: 6px;
 	}
+
+	.mainMenu{
+		display: none;
+	}
+
+	.hamburgerMenu{
+	display:flex;
+}
+
+	.hamburgerMenu{
+		display: inline-flex;
+		cursor:pointer;
+		float: right;
+    	margin-right: 20px;
+	}
+
+	nav	.socialContainer{
+		display:none;
+	}
+
+	.navLogoContainer {
+    margin-left: 20px;
+    width:auto;
+}
 	.archiveEventPrice, .archiveEventFood {
 		float: left;
 	}
@@ -1598,5 +1825,13 @@ textarea {
 	}
 	.archiveHeroText h1 {
 		margin-top: 0px;
+	}
+
+	.fullMenuSelection{
+		font-size: 14px;
+	}
+	.fullMenu{
+		width: calc(100% - 40px);
+    	padding: 20px;
 	}
 }

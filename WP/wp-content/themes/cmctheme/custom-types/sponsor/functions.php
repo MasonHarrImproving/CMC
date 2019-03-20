@@ -82,13 +82,13 @@ function sponsor_logo_meta_box($post) { ?>
 	?>
 	<?php wp_nonce_field(basename(__FILE__), 'sponsor_post_nonce'); ?>
 	<div>
-		<label style="width:150px;" for="sponsor-url">Sponsor URL</label>
+		<label style="width:150px;" for="sponsor-url">Sponsor URL(Required)</label>
 		<input type="text" name="sponsor-url" id="sponsor-url" value="<?php echo esc_attr( $sponsor_url ); ?>" size="30" />
 	</div>
 	<div>
-		<label style="width:150px;" for="sponsor-logo-url">Logo URL</label>
+		<label style="width:150px;" for="sponsor-logo-url">Logo URL(Required)</label>
 		<input type="text" name="sponsor-logo-url" id="sponsor-logo-url" value="<?php echo esc_attr( $sponsor_logo_url ); ?>" size="30" />
-		<label style="width:150px;" for="sponsor-logo-alt">Alt Text</label>
+		<label style="width:150px;" for="sponsor-logo-alt">Alt Text(Required)</label>
 		<input type="text" name="sponsor-logo-alt" id="sponsor-logo-alt" value="<?php echo esc_attr( $sponsor_logo_alt ); ?>" size="30" />
 	</div>
 	<div>

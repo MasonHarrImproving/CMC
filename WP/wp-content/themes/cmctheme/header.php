@@ -23,36 +23,142 @@
   </head>
   <body>
   	  <div class="wrapper">
-  	<div class="navContainer">
-  		<div class="nav">
-  		<ul class="navTextGroup">
-  			<li class="navText">About</li>
-  			<li class="navText">Community Conversations</li>
-  			<li class="navText">Connections</li>
-  			<li class="navText">Events
-<div class="nav-dropdown">
-    <a href="<?php echo home_url().'?page_id='.'348'; ?>">Upcoming Events</a>
-    <a href="#">Events Archive</a>
-    <a href="<?php echo home_url().'?page_id='.'220'; ?>">Event FAQs</a>
-  </div>
+<nav>
+    <ul class="mainMenu">
+         <li>
+          <a>Events</a>
+         <ul class="subMenu">
+             <li><?php echo '<a href="'. home_url().'?page_id=348'.'">Upcoming Events</a>';?></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=348'.'">Events Archive</a>';?></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=220&type=event'.'">Events FAQs</a>';?></li>
+           </ul>
+          <li><a>Connection</a>
+         <ul class="subMenu">
+             <li><a>Become a Member</a>
+          <ul class="SuperSubMenu">
+                     <li><?php echo '<a href="'. home_url().'?page_id=199'.'">Member Benefits</a>';?></li>
+                     <li><?php echo '<a href="'. home_url().'?page_id=220&type=member'.'">Member FAQs</a>';?>
+                     </li>
+                   </ul>
+             </li>
+             <li><a>Become a Sponsor</a>
+          <ul class="SuperSubMenu">
+                     <li><?php echo '<a href="'. home_url().'?page_id=199'.'">Sponsor Benefits</a>';?></li>
+                     <li><?php echo '<a href="'. home_url().'?page_id=220&type=sponsor'.'">Sponsor FAQs</a>';?>
+                     </li>
+                   </ul>
+             </li>
+             <li><?php echo '<a href="'. home_url().'?page_id=33'.'">Partners</a>';?></li>
+             <li><a href="#">Membership Directory</a></li>
+             <li><a href="#">Volunteer</a></li>
+             <li><a href="#">Donate</a></li>
+           </ul>
+        <li><a>Community Conversation</a>
+            <ul class="subMenu">
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">E-mail Signup</a></li>
+             <li><a href="#">Newsletter Archive</a></li>
+           </ul>
         </li>
-			</ul>
-			<a href="<?php home_url() ?>"><img src="<?php bloginfo('template_url') ?>/images/cmc-logo-full.png" alt=""  height="55px" width="140px"></a>
-  		<!-- <img class="mainLogo" src="cmclogo.png" height="55px" width="140px"> -->
-  		<ul class="tempRule navTextGroup">
-  			<li class="navText joinText">Join</li>
-  			<li class="navText">Donate</li>
-  			<li class="navText">Login</li>
-  		</ul>
-  		<div class="socialContainer">
-  			<ul class="navTextGroup">
-  			<li class="navImg facebook"><i class="fa fa-facebook-square"></i></li>
-  			<li class="navImg linkedin"><i class="fa fa-linkedin-square"></i></li>
-  			<li class="navImg twitter"><i class="fa fa-twitter-square"></i></li>
-  			<li class="navImg instagram"><i class="fa fa-instagram"></i></li>
-  			<li class="navImg youtube"><i class="fa fa-youtube-square"></i></li>
-  			</ul>
-  		</div>
-  		</div>
-  	</div>
+        <li><a>About Us</a>
+            <ul class="subMenu">
+             <li><a href="#">About and Mission</a></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=154'.'">Board</a>';?></li>
+             <li><a href="#">Staff</a></li>
+             <li><a href="#">History and Founders</a></li>
+             <li><a href="#">Legacy Funds</a></li>
+             <li><a href="#">Lifetime Members</a></li>
+           </ul>
+        </li>
+    </ul>
+    <div class="navLogoContainer"><a href="#">
+      <?php echo '<img class="navLogo" src="'.home_url().'/wp-content/uploads/2019/03/cmclogo.png'.'">';?>
+      </a></div>
+
+      <ul class="mainMenu waMenu">
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+    <div class="socialContainer">
+        <ul class="navTextGroup">
+        <li class="navImg facebook"><i class="fa fa-facebook-square"></i></li>
+        <li class="navImg linkedin"><i class="fa fa-linkedin-square"></i></li>
+        <li class="navImg twitter"><i class="fa fa-twitter-square"></i></li>
+        <li class="navImg instagram"><i class="fa fa-instagram"></i></li>
+        <li class="navImg youtube"><i class="fa fa-youtube-square"></i></li>
+        </ul>
+      </div>
+      <ul class="mainMenu hamburgerMenu">
+        <li><div class="menuLine"></div>
+            <div class="menuLine"></div>
+            <div class="menuLine"></div>
+          </li>
+      </ul>
+</nav>
+      <div class="fullMenu">
+        <div class="fullMenuSelection">
+          <a href="#">Events</a>
+        </div>
+                <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=348'.'">Upcoming Events</a>';?>
+        </div>
+                  <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=348'.'">Events Archive</a>';?>
+        </div>
+                  <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=220&type=event'.'">Events FAQs</a>';?>
+        </div>
+                <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=199'.'">Member Benefits</a>';?>
+        </div>
+                <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=220&type=member'.'">Member FAQs</a>';?>
+        </div>
+                  <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=199'.'">Sponsor Benefits</a>';?>
+        </div>
+                  <div class="fullMenuSelection">
+         <?php echo '<a href="'. home_url().'?page_id=220&type=sponsor'.'">Sponsor FAQs</a>';?>
+        </div>
+                <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=33'.'">Partners</a>';?>
+        </div>
+                <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=154'.'">Board</a>';?>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">Volunteer</a>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">Donate</a>
+        </div>
+                      <div class="fullMenuSelection">
+          <a href="#">Contact Us</a>
+        </div>
+                <div class="fullMenuSelection">
+          <a href="#">E-Mail Signup</a>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">Newsletter Archive</a>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">Donate</a>
+        </div>
+                      <div class="fullMenuSelection">
+          <a href="#">About and Mission</a>
+        </div>
+                <div class="fullMenuSelection">
+          <a href="#">Staff</a>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">History and Founders</a>
+        </div>
+                  <div class="fullMenuSelection">
+          <a href="#">Legacy Funds</a>
+        </div>
+                          <div class="fullMenuSelection">
+          <a href="#">Lifetime Members</a>
+        </div>
+      </div>
 

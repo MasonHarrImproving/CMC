@@ -75,8 +75,11 @@ add_action('add_meta_boxes', 'create_benefit_meta_boxes');
 function benefit_logo_meta_box($post) { ?>
 	<?php
 		$benefit_level = get_post_meta($post->ID, '_benefit_level', true);
+		$is_for_member = get_post_meta($post->ID, '_member', true);
 	?>
 	<?php wp_nonce_field(basename(__FILE__), 'benefit_post_nonce'); ?>
+	<label>Member Benefit?</label>
+	<input type="checkbox" name="member" id="member" <?php checked($is_for_member, 1); ?>/>
 		<select name="benefit-level" id="benefit-level">
 			<option>--Select benefit Level--</option>
 			<option value="diamond" <?php selected($benefit_level, 'diamond'); ?>>Diamond</option>
@@ -97,11 +100,14 @@ function save_benefit_post($post_id) {
 		return $post_id;
 	}
 	$benefit_level = (isset($_POST['benefit-level']) ? $_POST['benefit-level'] : null);
+	$member = (isset($_POST['member']) ? isset($_POST['member']) : null);
 
 
 	$orig_benefit_level = get_post_meta($post_id, '_benefit_level', true);
+	$orig_member = get_post_meta($post_id, '_member', true);
 
 	update_meta_data_for_post($post_id, $orig_benefit_level, $benefit_level, '_benefit_level');
+	update_meta_data_for_post($post_id, $orig_member, $member, '_member');
 
 	
 }

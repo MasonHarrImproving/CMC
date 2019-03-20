@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'salt' => 'vd&W*aH}Y}pMj) K',
-    'password' => '&;|4T&KM^W))X.$$',
+    'salt' => 'tNM!C&D<n</_AY:K',
+    'password' => 'bbG$s&k=5;KHjHWh',
     'iv' => ''
 );

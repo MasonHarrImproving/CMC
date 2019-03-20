@@ -18,8 +18,17 @@ $heroimage = get_field('home_page_hero_image');
 $mainevent = get_field('main_event');
 $subevent1 = get_field('sub_event_1');  
 $subevent2 = get_field('sub_event_2');
-$cmcstats = get_field('stats');   
-?>
+$cmcstats = get_field('stats');
+$featuredevents = [];   
+
+      $getevents = array(
+            'post_type' => 'event',
+            'posts_per_page' => 2,
+        );
+        
+        $events = new WP_Query($getevents);
+    ?>
+
 	<section class="homePage">
     <div class="homePageHero" style="background-image:url(<?php echo $heroimage['url'];?>)">
       <div class="homePageHeroDarkener">
@@ -106,7 +115,9 @@ $cmcstats = get_field('stats');
   </div>
   <div class="moreEventsContainer">
   <div class="moreEvents">
+            <?php echo '<a href="'.home_url().'?page_id='.'348'.'">';?>
     <?php the_field('more_events_button');?>
+  </a>
     </div>
   </div>
   <div class="archiveHero">
