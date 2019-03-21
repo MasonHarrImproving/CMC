@@ -43,8 +43,8 @@
         </div>
       </div>
       <div class="donateSubmitBtns">
-        <div class="donateCancelBtn"><?php the_field('cancelBtn')?></div>
-        <div class="donatePayBtn"><?php the_field('payBtn')?></div>
+        <div class="donateCancelBtn"><?php the_field('cancelbtn')?></div>
+        <div class="donatePayBtn"><?php the_field('paybtn')?></div>
       </div>
     </section>
 

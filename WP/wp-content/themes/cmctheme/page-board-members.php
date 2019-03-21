@@ -3,6 +3,7 @@
     Template Name: Board Members Template
 */
     get_header();
+    get_template_part('template-parts/shared/content-hero');
 
     $members_args = array(
         'post_type' => 'board-member'

@@ -15,7 +15,7 @@ wp_footer();
 ?>
      <div class="spacing"></div>
     <div class="footerContainer">
-      <div class="logoBox"><img class="footerLogo" src="cmclogo.png"></div>
+      <div class="logoBox">  <?php echo '<img class="footerLogo" src="'.home_url().'/wp-content/uploads/2019/03/cmclogo.png'.'">';?></div>
       <div class="contactBox">
         <p class="contactText">Contact</p>
         <p class="contactNumber">614-464-3220</p>
@@ -36,6 +36,18 @@ wp_footer();
     </div>
     <div></div>
   </div>
+            <div class="lowerInfo">
+            <p>©2016 Columbus Metropolitan Club. All rights reserved. Review our privacy policy, terms of use, and non-profit information.</p>
+            <div class="innerLowerInfo">
+            <span>About</span>
+            <span>
+              <?php echo '<a href="'. home_url().'?page_id=348'.'">Events</a>';?>
+            </span>
+            <span>Join</span>
+            <span>Donate</span>
+            <span>Login</span>
+          </div>
+          </div>
 </body>
    <script>
 

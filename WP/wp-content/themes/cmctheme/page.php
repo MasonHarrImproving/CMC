@@ -33,7 +33,9 @@ $featuredevents = [];
     <div class="homePageHero" style="background-image:url(<?php echo $heroimage['url'];?>)">
       <div class="homePageHeroDarkener">
     <div class="homePageHeroContainer"><h1><?php the_field('home_page_hero_title'); ?></h1><p><?php the_field('home_page_hero_description'); ?></p><div class="learnMore">
+      <?php echo '<a href="'.home_url().'?page_id='.'348'.'">';?>
     <?php the_field('home_page_hero_learn_more'); ?>
+  </a>
     </div></div></div>
 
 

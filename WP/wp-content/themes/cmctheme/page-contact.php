@@ -3,6 +3,7 @@
     Template Name: Contact Page Template
 */
     get_header();
+    get_template_part('template-parts/shared/content-hero');
 ?>
 <section class="contactContainer mainElement">
     <div class="mainContactInfoBox">

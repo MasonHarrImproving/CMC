@@ -49,7 +49,7 @@
                    </ul>
              </li>
              <li><?php echo '<a href="'. home_url().'?page_id=33'.'">Partners</a>';?></li>
-             <li><a href="#">Membership Directory</a></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=483'.'">Membership Directory</a>';?></li>
              <li><a href="#">Volunteer</a></li>
              <li><a href="#">Donate</a></li>
            </ul>
@@ -71,7 +71,7 @@
            </ul>
         </li>
     </ul>
-    <div class="navLogoContainer"><a href="#">
+    <div class="navLogoContainer"><a href="<?php echo home_url();?>">
       <?php echo '<img class="navLogo" src="'.home_url().'/wp-content/uploads/2019/03/cmclogo.png'.'">';?>
       </a></div>
 
@@ -82,11 +82,24 @@
     </ul>
     <div class="socialContainer">
         <ul class="navTextGroup">
-        <li class="navImg facebook"><i class="fa fa-facebook-square"></i></li>
-        <li class="navImg linkedin"><i class="fa fa-linkedin-square"></i></li>
-        <li class="navImg twitter"><i class="fa fa-twitter-square"></i></li>
-        <li class="navImg instagram"><i class="fa fa-instagram"></i></li>
-        <li class="navImg youtube"><i class="fa fa-youtube-square"></i></li>
+        <li class="navImg facebook">
+<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=facebook'.'">';?>
+          <i class="fa fa-facebook-square"></i>
+</a>
+        </li>
+        <li class="navImg linkedin"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=linkedin'.'">';?>
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </li>
+        <li class="navImg twitter"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=twitter'.'">';?>
+          <i class="fa fa-twitter-square"></i>
+        </a></li>
+        <li class="navImg instagram"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=instagram'.'">';?>
+          <i class="fa fa-instagram"></i>
+        </a></i></li>
+        <li class="navImg youtube"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=youtube'.'">';?>
+          <i class="fa fa-youtube-square"></i>
+        </a></li>
         </ul>
       </div>
       <ul class="mainMenu hamburgerMenu">
@@ -127,6 +140,9 @@
                 <div class="fullMenuSelection">
           <?php echo '<a href="'. home_url().'?page_id=154'.'">Board</a>';?>
         </div>
+        <div class="fullMenuSelection">
+          <?php echo '<a href="'. home_url().'?page_id=483'.'">Membership Directory</a>';?>
+        </div>
                   <div class="fullMenuSelection">
           <a href="#">Volunteer</a>
         </div>
@@ -160,5 +176,34 @@
                           <div class="fullMenuSelection">
           <a href="#">Lifetime Members</a>
         </div>
+        <div class="socialContainer hiddenNavSocial">
+        <ul class="navTextGroup">
+        <li class="navImg facebook">
+<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=facebook'.'">';?>
+          <i class="fa fa-facebook-square"></i>
+</a>
+        </li>
+        <li class="navImg linkedin">
+          <?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=linkedin'.'">';?>
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+        </li>
+        <li class="navImg twitter">
+<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=twitter'.'">';?>
+          <i class="fa fa-twitter-square"></i>
+        </a>
+        </li>
+        <li class="navImg instagram">
+<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=instagram'.'">';?>
+          <i class="fa fa-instagram"></i>
+        </a>
+        </li>
+        <li class="navImg youtube">
+<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=youtube'.'">';?>
+          <i class="fa fa-youtube-square"></i>
+        </a>
+        </li>
+        </ul>
+      </div>
       </div>
 
