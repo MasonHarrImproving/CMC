@@ -43,9 +43,9 @@ wp_footer();
             <span>
               <?php echo '<a href="'. home_url().'?page_id=348'.'">Events</a>';?>
             </span>
-            <span>Join</span>
-            <span>Donate</span>
-            <span>Login</span>
+            <span><a href="https://columbusmetroclub.wildapricot.org/membership">Join</a></span>
+            <span><a href="https://columbusmetroclub.wildapricot.org/donate">Donate</a></span>
+            <span> <?php echo do_shortcode('[wa_login login_label="Log in" redirect_page="'.home_url().'"]');?></span>
           </div>
           </div>
 </body>

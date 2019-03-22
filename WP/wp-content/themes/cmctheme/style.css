@@ -138,6 +138,43 @@ nav{
 	height: 250px;
 	width: 190px;
 }
+.waMenu .wa_login_shortcode p{
+	display:none;
+}
+
+.waMenu .wa_login_shortcode{
+	margin-bottom:1px;
+}
+
+.waMenu .wa_login_shortcode .button-primary{
+	margin: 0;
+    text-align: center;
+    padding: 12px 15px 12px 15px;
+    background-color: #333333;
+    display: block;
+    color: #999999;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+    border: 0px;
+    cursor:pointer;
+}
+
+.innerLowerInfo .wa_login_shortcode p{
+	display:none;
+}
+
+.innerLowerInfo .wa_login_shortcode{
+	margin-bottom:1px;
+}
+
+.innerLowerInfo .wa_login_shortcode .button-primary{
+	background-color: transparent;
+    color: white;
+    border: 0px;
+    cursor:pointer;
+}
+
 .boardContainer {
 	font-family: 'Nunito Sans', sans-serif;
 	display: flex;
@@ -1310,6 +1347,10 @@ font-size: 13px;
 }
 
 .nav-dropdown a:hover{
+		background-color: rgba(0, 0, 0, .3);
+}
+
+.nav-dropdown .wa_login_shortcode:hover{
 		background-color: rgba(0, 0, 0, .3);
 }
 

@@ -76,9 +76,9 @@
       </a></div>
 
       <ul class="mainMenu waMenu">
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Donate</a></li>
-        <li><a href="#">Login</a></li>
+        <li><?php echo '<a href="https://columbusmetroclub.wildapricot.org/membership">Join</a>';?></li>
+        <li><?php echo '<a href="https://columbusmetroclub.wildapricot.org/donate">Donate</a>';?></li>
+       <li> <?php echo do_shortcode('[wa_login login_label="Log in" redirect_page="'.home_url().'"]');?></li>
     </ul>
     <div class="socialContainer">
         <ul class="navTextGroup">
@@ -147,7 +147,7 @@
           <a href="#">Volunteer</a>
         </div>
                   <div class="fullMenuSelection">
-          <a href="#">Donate</a>
+       <?php echo '<a href="https://columbusmetroclub.wildapricot.org/membership">Join</a>';?>
         </div>
                       <div class="fullMenuSelection">
           <a href="#">Contact Us</a>
@@ -159,7 +159,7 @@
           <a href="#">Newsletter Archive</a>
         </div>
                   <div class="fullMenuSelection">
-          <a href="#">Donate</a>
+        <?php echo '<a href="https://columbusmetroclub.wildapricot.org/donate">Donate</a>';?>
         </div>
                       <div class="fullMenuSelection">
           <a href="#">About and Mission</a>
