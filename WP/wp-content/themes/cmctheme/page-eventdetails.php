@@ -49,7 +49,11 @@
         </div>
         <div class="pastEventInfo details">
           <div class="eventInteract">
-          <div>Register</div>
+          <div>
+            <?php 
+            echo '<a href="'.$post["wild_apricot_url"][0].'">';
+            ?>
+          Register</a></div>
           <span>Share Event</span>
           <span>Add To Calendar</span>
         </div>

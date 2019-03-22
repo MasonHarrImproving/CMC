@@ -75,6 +75,9 @@ body, html {
 	width: 120px;
 	height: 25px;
 	cursor: pointer;
+	font-size: 14px;
+    display: flex;
+    align-items: center;
 	border: solid #686a6a 1px;
 }
 .navImg {
@@ -133,7 +136,7 @@ nav{
 }
 .memberImage {
 	height: 250px;
-	width: 200px;
+	width: 190px;
 }
 .boardContainer {
 	font-family: 'Nunito Sans', sans-serif;
@@ -355,7 +358,7 @@ textarea {
 }
 .frequentMainText{
 	cursor:pointer;
-	margin:50px;
+	margin:10px;
 }
 .frequentFeatureText {
 	color: #999999;
@@ -381,8 +384,18 @@ textarea {
 	display:block;
 }
 .frequentContainer {
-	padding: 50px;
+	padding: 10px;
 }
+
+.memberQuestions{
+	margin-bottom:50px;
+}
+
+.eventInteract a{
+	text-decoration: none;
+    color: inherit;
+}
+
 .bio {
 	max-width: 960px;
 	display: flex;
@@ -652,6 +665,7 @@ textarea {
 .eventInfo {
 	display: inline-block;
 	padding: 20px;
+	width:calc(100% - 40px);
 }
 .eventInfo .title {
 	width: 100%;
@@ -661,6 +675,18 @@ textarea {
 }
 .bottomInfo i {
 	color: #016C5B;
+}
+
+.upperMainEvent .learnEvent{
+	margin: auto;
+    margin-right: 1px;
+}
+
+.footerSearch span{
+	margin-left: 5px;
+}
+.upperMainEvent .bottomInfo{
+	justify-content:space-around;
 }
 .greenBar {
 	height: 12.5px;
@@ -694,9 +720,10 @@ textarea {
 }
 
 .bottomInfo{
-	    height: 32px;
+    height: auto;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .bottomEventDate {
@@ -705,7 +732,7 @@ textarea {
 }
 
 .bottomEventDate,.bottomEventTime {
-font-size: 12px;
+font-size: 13px;
 }
 .pastEvents {
 	width: 100%;
@@ -1024,6 +1051,7 @@ font-size: 12px;
 	margin: auto;
 	position: relative;
 	margin-left: 10%;
+	margin-top: 20%;
 }
 .homePageHeroContainer h1 {
 	font-size: 50px;
@@ -1056,7 +1084,7 @@ font-size: 12px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 .moreEventsContainer {
-	display: inline-block;
+	display:flex;
 	width: 100%;
 	margin-bottom: 50px;
 }
@@ -1709,6 +1737,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 		margin-left: 0px;
 		margin: auto;
 		text-align: center;
+		margin-top: 20%;
 	}
 	.homePageHero {
 		text-align: center;
@@ -1808,22 +1837,28 @@ nav .subMenu li:hover>.SuperSubMenu{
 	}
 	.bottomEventDate {
 		margin: 15px;
-		width: 100%;
-		float: left;
-		margin-left: 0;
+    	text-align: center;
+    	width: 100%;
+    	float: none;
+    	margin-left: 0;
 	}
 	.bottomEventTime {
 		margin: 15px;
-		float: left;
-		width: 100%;
-		margin-left: 0px;
+    	text-align: center;
+    	width: 100%;
+    	float: none;
+    	margin-left: 0;
 	}
 	.bottomEventLocation {
-		width: calc(90% - 140px);
 		margin: 15px;
-		float: left;
-		margin-left: 0px;
+    	text-align: center;
+    	width: 100%;
+    	float: none;
+    	margin-left: 0;
 	}
+	.upperMainEvent .learnEvent{
+    margin-right: auto;
+}
 	.learnEvent {
 		display: inline-block;
 		padding: 5px;
@@ -1832,6 +1867,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 		font-weight: 200;
 		height: 25px;
 		width: 120px;
+		margin:auto;
 		text-align: center;
 	}
 	.pressCoveredEvent {

@@ -30,7 +30,7 @@ wp_footer();
       <div class="searchBox">
         <p class="boxText">Search</p>
         <div class="footerSearch">
-          <span>Search</span>
+          <span><i class="fa fa-search"></i> Search</span>
         </div>
       </div>
     </div>
