@@ -36,7 +36,7 @@
          <ul class="subMenu">
              <li><a>Become a Member</a>
           <ul class="SuperSubMenu">
-                     <li><?php echo '<a href="'. home_url().'?page_id=199'.'">Member Benefits</a>';?></li>
+                     <li><?php echo '<a href="'. home_url().'?page_id=473'.'">Member Benefits</a>';?></li>
                      <li><?php echo '<a href="'. home_url().'?page_id=220&type=member'.'">Member FAQs</a>';?>
                      </li>
                    </ul>
@@ -123,7 +123,7 @@
           <?php echo '<a href="'. home_url().'?page_id=220&type=event'.'">Events FAQs</a>';?>
         </div>
                 <div class="fullMenuSelection">
-          <?php echo '<a href="'. home_url().'?page_id=199'.'">Member Benefits</a>';?>
+          <?php echo '<a href="'. home_url().'?page_id=473'.'">Member Benefits</a>';?>
         </div>
                 <div class="fullMenuSelection">
           <?php echo '<a href="'. home_url().'?page_id=220&type=member'.'">Member FAQs</a>';?>
