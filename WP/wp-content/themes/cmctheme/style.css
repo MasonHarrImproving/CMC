@@ -97,19 +97,11 @@ body, html {
 	margin:35px;
 }
 
-.searchEvents:before{
-	content:"\f002";
-}
 
 .searchResults .eventResult{
 	text-decoration: none;
     color: #006c3f;
     font-size: 26px;
-    overflow: hidden;
-    display: flex;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 250px;
 
 }
 
