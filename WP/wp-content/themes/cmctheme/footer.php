@@ -30,7 +30,7 @@ wp_footer();
       <div class="searchBox">
         <p class="boxText">Search</p>
         <div class="footerSearch">
-          <span><i class="fa fa-search"></i> Search</span>
+          <input class="searchEvents" placeholder=" Search">
         </div>
       </div>
     </div>
@@ -50,7 +50,14 @@ wp_footer();
           </div>
 </body>
    <script>
-
+  $(".searchEvents").on('keyup', function (e) {
+      if (e.keyCode == 13) {
+          if(e.keyCode.toString().length > 0){
+            var test = window.location.href.split('?')[0];
+           window.location.href = test + '?page_id=590' + '&searchstr=' + $('.searchEvents').val();
+          }
+      }
+  });
       $('.navText').hover(function(){
         $(this).children('.nav-dropdown').css('display', 'block');
         $(this).find('.innerDropdown').mouseleave(function(){

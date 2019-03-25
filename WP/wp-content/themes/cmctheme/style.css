@@ -72,13 +72,58 @@ body, html {
 	margin-bottom: 10px;
 }
 .footerSearch {
-	width: 120px;
-	height: 25px;
 	cursor: pointer;
 	font-size: 14px;
     display: flex;
     align-items: center;
 	border: solid #686a6a 1px;
+}
+
+.footerSearch .searchText{
+	float: left;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.searchResults{
+	text-align: left;
+}
+
+.results{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.results h1{
+	margin:35px;
+}
+
+.searchEvents:before{
+	content:"\f002";
+}
+
+.searchResults .eventResult{
+	text-decoration: none;
+    color: #006c3f;
+    font-size: 26px;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+
+}
+
+.footerSearch input{
+	    width: 120px;
+    height: 25px;
+    cursor: pointer;
+    background-color: #333333;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    display: flex;
+    align-items: center;
+    border: none;
 }
 .navImg {
 	list-style: none;
@@ -724,6 +769,7 @@ textarea {
 .eventInfo .title {
 	width: 100%;
 	float: left;
+	font-size: 26px;
 	font-weight: 400;
 	display: inline-block;
 }
