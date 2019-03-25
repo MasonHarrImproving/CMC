@@ -55,7 +55,7 @@
            </ul>
         <li><a>Community Conversation</a>
             <ul class="subMenu">
-             <li><a href="#">Contact Us</a></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=175'.'">Contact Us</a>';?></li>
              <li><a href="#">E-mail Signup</a></li>
              <li><a href="#">Newsletter Archive</a></li>
            </ul>
@@ -150,7 +150,7 @@
        <?php echo '<a href="https://columbusmetroclub.wildapricot.org/membership">Join</a>';?>
         </div>
                       <div class="fullMenuSelection">
-          <a href="#">Contact Us</a>
+          <?php echo '<a href="'. home_url().'?page_id=175'.'">Contact Us</a>';?>
         </div>
                 <div class="fullMenuSelection">
           <a href="#">E-Mail Signup</a>

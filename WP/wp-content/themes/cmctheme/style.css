@@ -1126,10 +1126,8 @@ font-size: 13px;
 	display: inline-block;
 	background-color: #E6E6E6;
 	padding: 15px;
-	/* margin: auto; */
+	margin: auto;
 	position: relative;
-	left: 50%;
-	margin-left: -87.5px;
 	width: 120px;
 	cursor: pointer;
 	text-align: center;
@@ -1720,6 +1718,9 @@ nav .subMenu li:hover>.SuperSubMenu{
 		margin-right: 6px;
 	}
 
+	.lowerInfo{
+		text-align: center;
+	}
 	.lowerInfo p{
 		font-size: 10px;
     width: 80%;
@@ -1894,14 +1895,16 @@ nav .subMenu li:hover>.SuperSubMenu{
 		font-size: 2vw;
 	}
 	.bottomEventDate {
-		margin: 15px;
+		margin: auto;
+    	margin-bottom: 15px;
     	text-align: center;
     	width: 100%;
     	float: none;
     	margin-left: 0;
 	}
 	.bottomEventTime {
-		margin: 15px;
+		margin: auto;
+    	margin-bottom: 15px;
     	text-align: center;
     	width: 100%;
     	float: none;
@@ -1983,6 +1986,11 @@ nav .subMenu li:hover>.SuperSubMenu{
 .eventSponsor img {
     max-width: 100%;
 }
+
+.moreEventsContainer{
+	justify-content: center;
+}
+
 }
 @media screen and (max-width:975px) {
 	.innerInfoBox {
