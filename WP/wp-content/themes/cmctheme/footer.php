@@ -30,7 +30,7 @@ wp_footer();
       <div class="searchBox">
         <p class="boxText">Search</p>
         <div class="footerSearch">
-          <input class="searchEvents" placeholder=" Search">
+          <input class="searchEvents" placeholder=" &#xF002; Search">
         </div>
       </div>
     </div>

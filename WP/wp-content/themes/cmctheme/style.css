@@ -97,11 +97,19 @@ body, html {
 	margin:35px;
 }
 
+.searchEvents:before{
+	content:"\f002";
+}
 
 .searchResults .eventResult{
 	text-decoration: none;
     color: #006c3f;
     font-size: 26px;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
 
 }
 
@@ -1010,6 +1018,16 @@ font-size: 13px;
 .followText {
 	color: #666666;
 }
+
+.searchEvents::placeholder {
+   font-family: FontAwesome;
+}
+
+.archiveLink a{
+	text-decoration: none;
+	color:inherit;
+}
+
 .eventSponsor {
 	display: inline-flex;
 	width: 50%;
@@ -1018,6 +1036,7 @@ font-size: 13px;
 .eventSponsorBox {
 	display: inline-flex;
 	margin-bottom: 50px;
+	justify-content: center;
 	margin-top: 50px;
 	padding: 20px;
 	width: calc(100% - 40px);

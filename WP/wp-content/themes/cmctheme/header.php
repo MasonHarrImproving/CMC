@@ -29,7 +29,7 @@
           <a>Events</a>
          <ul class="subMenu">
              <li><?php echo '<a href="'. home_url().'?page_id=348'.'">Upcoming Events</a>';?></li>
-             <li><?php echo '<a href="'. home_url().'?page_id=348'.'">Events Archive</a>';?></li>
+             <li><?php echo '<a href="'. home_url().'?page_id=595'.'">Events Archive</a>';?></li>
              <li><?php echo '<a href="'. home_url().'?page_id=220&type=event'.'">Events FAQs</a>';?></li>
            </ul>
           <li><a>Connection</a>
@@ -83,21 +83,24 @@
     <div class="socialContainer">
         <ul class="navTextGroup">
         <li class="navImg facebook">
-<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=facebook'.'">';?>
+          <a class="socialLink" target="_blank" href="https://facebook.com/cbusmetroclub/">
           <i class="fa fa-facebook-square"></i>
 </a>
         </li>
-        <li class="navImg linkedin"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=linkedin'.'">';?>
+        <li class="navImg linkedin">
+          <a class="socialLink" target="_blank" href="https://www.linkedin.com/companies/cbusmetroclub">
           <i class="fa fa-linkedin-square"></i>
         </a>
       </li>
-        <li class="navImg twitter"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=twitter'.'">';?>
+        <li class="navImg twitter">
+          <a class="socialLink" target="_blank" href="https://twitter.com/cbusmetroclub">
           <i class="fa fa-twitter-square"></i>
         </a></li>
-        <li class="navImg instagram"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=instagram'.'">';?>
+        <li class="navImg instagram"><a class="socialLink" target="_blank" href="https://www.instagram.com/cbusmetroclub/">
           <i class="fa fa-instagram"></i>
         </a></i></li>
-        <li class="navImg youtube"><?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=youtube'.'">';?>
+        <li class="navImg youtube">
+          <a class="socialLink" target="_blank" href="https://www.youtube.com/user/adrewbart">
           <i class="fa fa-youtube-square"></i>
         </a></li>
         </ul>
@@ -117,7 +120,7 @@
           <?php echo '<a href="'. home_url().'?page_id=348'.'">Upcoming Events</a>';?>
         </div>
                   <div class="fullMenuSelection">
-          <?php echo '<a href="'. home_url().'?page_id=348'.'">Events Archive</a>';?>
+          <?php echo '<a href="'. home_url().'?page_id=595'.'">Events Archive</a>';?>
         </div>
                   <div class="fullMenuSelection">
           <?php echo '<a href="'. home_url().'?page_id=220&type=event'.'">Events FAQs</a>';?>
@@ -179,27 +182,27 @@
         <div class="socialContainer hiddenNavSocial">
         <ul class="navTextGroup">
         <li class="navImg facebook">
-<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=facebook'.'">';?>
+          <a class="socialLink" target="_blank" href="https://facebook.com/cbusmetroclub/">
           <i class="fa fa-facebook-square"></i>
 </a>
         </li>
         <li class="navImg linkedin">
-          <?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=linkedin'.'">';?>
+                    <a class="socialLink" target="_blank" href="https://www.linkedin.com/companies/cbusmetroclub">
           <i class="fa fa-linkedin-square"></i>
         </a>
         </li>
         <li class="navImg twitter">
-<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=twitter'.'">';?>
+                    <a class="socialLink" target="_blank" href="https://twitter.com/cbusmetroclub">
           <i class="fa fa-twitter-square"></i>
         </a>
         </li>
         <li class="navImg instagram">
-<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=instagram'.'">';?>
+          <a class="socialLink" target="_blank" href="https://www.instagram.com/cbusmetroclub/">
           <i class="fa fa-instagram"></i>
         </a>
         </li>
         <li class="navImg youtube">
-<?php echo '<a class="socialLink" target="_blank" href="'.home_url().'?page_id='.'582&socialtype=youtube'.'">';?>
+           <a class="socialLink" target="_blank" href="https://www.youtube.com/user/adrewbart">
           <i class="fa fa-youtube-square"></i>
         </a>
         </li>

@@ -52,7 +52,7 @@ $featuredevents = [];
         <h1 class="title"><?php echo get_post_custom($mainevent["event"]->ID)['event_title'][0];?></h1>
         <p class="eventDesc"><?php echo get_post_custom($mainevent["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($mainevent["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F jS Y", strtotime(get_post_custom($mainevent["event"]->ID)['event_date'][0])); ?></span>
           <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($mainevent["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($mainevent["event"]->ID)['event_end_time'][0];?></span>
           <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
           if(strtotime(get_post_custom($mainevent["event"]->ID)['event_date'][0]) < time()){
@@ -76,7 +76,7 @@ $featuredevents = [];
         <h1 class="title"><?php echo get_post_custom($subevent1["event"]->ID)['event_title'][0];?></h1>
         <p class="eventDesc"><?php echo get_post_custom($subevent1["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($subevent1["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F j Y", strtotime(get_post_custom($subevent1["event"]->ID)['event_date'][0]));?></span>
           <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent1["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent1["event"]->ID)['event_end_time'][0];?></span>
           <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
           if(strtotime(get_post_custom($subevent1["event"]->ID)['event_date'][0]) < time()){
@@ -98,7 +98,7 @@ $featuredevents = [];
         <h1 class="title"><?php echo get_post_custom($subevent2["event"]->ID)['event_title'][0];?></h1>
         <p class="eventDesc"><?php echo get_post_custom($subevent2["event"]->ID)['event_description'][0];?></p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo get_post_custom($subevent2["event"]->ID)['event_date'][0]; ?></span>
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F jS Y", strtotime(get_post_custom($subevent2["event"]->ID)['event_date'][0])); ?></span>
           <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent2["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent2["event"]->ID)['event_end_time'][0];?></span>
           <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
           if(strtotime(get_post_custom($subevent2["event"]->ID)['event_date'][0]) < time()){
@@ -127,7 +127,7 @@ $featuredevents = [];
     <div class="archiveHeroText">
     <?php the_field('archive_text_title');?>
     <p><?php the_field('archive_text_description');?></p>
-    <div><div class="archiveLink"><?php the_field('archive_button');?></div>
+    <div><div class="archiveLink"><?php echo '<a href="'.home_url().'?page_id='.'595'.'">Go to the Archive</a>';?></div>
 </div>
     </div>
     </div>

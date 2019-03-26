@@ -27,7 +27,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 'key' => 'event_date',
                 'type'    => 'DATE',
                 'value' => $today,
-                'compare' => '>'
+                'compare' => '<'
             )
          )
     );
@@ -40,7 +40,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     if ($eventsquery -> have_posts()) {
         $posts = $eventsquery->posts;
         foreach($posts as $post) {
-            $pagetype = "374";
+            $pagetype = "417";
     echo '<section class="eventListing">
       <div class="eventContainer">
         <div class="greenBar"></div>

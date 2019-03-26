@@ -34,7 +34,7 @@
         <div class="pastEventDesc">
           <div class="pastEventUpperDetails">
    <div class="leftSideArchive">
-    <span class="archiveEventDate archiveInfo"><?php if(strlen($post["event_date"][0]) > 0){ echo '<i class="fa fa-calendar-o"></i>'.$post["event_date"][0];}?></span>
+    <span class="archiveEventDate archiveInfo"><?php if(strlen($post["event_date"][0]) > 0){ echo '<i class="fa fa-calendar-o"></i>'.date("F jS Y", strtotime($post["event_date"][0]));}?></span>
        <div class="archiveEventTime archiveInfo"><?php if(strlen($post["event_start_time"][0]) > 0){ echo '<i class="fa fa-clock-o"></i>'.$post["event_start_time"][0].'-'.$post["event_end_time"][0]; }?></div>
        <div class="archiveEventLocation archiveInfo"><?php if(strlen($post["event_location"][0]) > 0){ echo '<i class="fa fa-map-pin"></i>'.$post["event_location"][0].'<br>'.$post["event_street"][0].'<br>'.$post["event_city"][0]; }?></div>
     </div>
