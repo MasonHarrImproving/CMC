@@ -78,6 +78,62 @@
     
     $bronzequery = new WP_Query($bronze_args);
 ?>
+
+<?php
+    $leader_args = array(
+        'post_type' => 'benefit',
+        'meta_query' => array(
+            array(
+                'key' => '_benefit_level',
+                'value' => 'leader'
+            )
+        )
+    );
+    
+    $leaderquery = new WP_Query($leader_args);
+?>
+
+<?php
+    $pro_args = array(
+        'post_type' => 'benefit',
+        'meta_query' => array(
+            array(
+                'key' => '_benefit_level',
+                'value' => 'pro'
+            )
+        )
+    );
+    
+    $proquery = new WP_Query($pro_args);
+?>
+
+<?php
+    $regular_args = array(
+        'post_type' => 'benefit',
+        'meta_query' => array(
+            array(
+                'key' => '_benefit_level',
+                'value' => 'regular'
+            )
+        )
+    );
+    
+    $regularquery = new WP_Query($regular_args);
+?>
+
+<?php
+    $company_args = array(
+        'post_type' => 'benefit',
+        'meta_query' => array(
+            array(
+                'key' => '_benefit_level',
+                'value' => 'company'
+            )
+        )
+    );
+    
+    $companyquery = new WP_Query($company_args);
+?>
 <div class="row justify-content-center">
 <section class="sponsorsBenefits mainElement">
       <div class="sponsorContactContainer">
@@ -160,7 +216,70 @@
         }
               ?>
       </div>
+
       </div>
+            <div class="sponsorLowerBenefits">
+                            <div class="pro sponsorBox">
+          <p class="sponsorAmount">$1,000</p>
+          <p class="sponsorType">YOUNG PROFESSIONAL</p>
+          <?php 
+       if ($proquery->have_posts() ) {
+            $proposts = $proquery->posts;
+        foreach($proposts as $post) {
+          if(!isset(get_post_custom($post->ID)['member'])){
+       echo '<span>'.$post->post_title.'</span>';
+           }
+         }
+           wp_reset_postdata();
+        }
+              ?>
+      </div>
+                    <div class="company sponsorBox">
+          <p class="sponsorAmount">$1,000</p>
+          <p class="sponsorType">COMPANY</p>
+          <?php 
+       if ($companyquery->have_posts() ) {
+            $companyposts = $companyquery->posts;
+        foreach($companyposts as $post) {
+          if(!isset(get_post_custom($post->ID)['member'])){
+       echo '<span>'.$post->post_title.'</span>';
+           }
+         }
+           wp_reset_postdata();
+        }
+              ?>
+      </div>
+                    <div class="regular sponsorBox">
+          <p class="sponsorAmount">$1,000</p>
+          <p class="sponsorType">Regular</p>
+          <?php 
+       if ($regularquery->have_posts() ) {
+            $regularposts = $regularquery->posts;
+        foreach($regularposts as $post) {
+          if(!isset(get_post_custom($post->ID)['member'])){
+       echo '<span>'.$post->post_title.'</span>';
+           }
+         }
+           wp_reset_postdata();
+        }
+              ?>
+      </div>
+                    <div class="leader sponsorBox">
+          <p class="sponsorAmount">$1,000</p>
+          <p class="sponsorType">SEASONED LEADER</p>
+          <?php 
+       if ($leaderquery->have_posts() ) {
+            $leaderposts = $leaderquery->posts;
+        foreach($leaderposts as $post) {
+          if(!isset(get_post_custom($post->ID)['member'])){
+       echo '<span>'.$post->post_title.'</span>';
+           }
+         }
+           wp_reset_postdata();
+        }
+              ?>
+      </div>
+            </div>
     </div>
     </section>
 

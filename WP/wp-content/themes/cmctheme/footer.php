@@ -71,5 +71,18 @@ wp_footer();
         $('.fullMenu').css('display', 'flex');
       });
 
+                $('.eventInteract').children('.shareEventButtons').fadeOut(10);
+      $('.shareEventBtn').click(function(){
+      if($(this).children('.frequentFeatureText')){
+      //   if($(this).children('i').attr('class') === 'fa fa-plus'){
+      //   $(this).children('i').attr('class', 'fa fa-close');
+      // }
+      // else{
+      //   $(this).children('i').attr('class', 'fa fa-plus');
+      // }
+      console.log($(this).find('.shareEventButtons'));
+        $('.eventInteract').children('.shareEventButtons').fadeToggle( 1000 );
+      }
+    });
     </script>
 </html>

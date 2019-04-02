@@ -75,6 +75,7 @@ body, html {
 	cursor: pointer;
 	font-size: 14px;
     display: flex;
+    max-width: 200px;
     align-items: center;
 	border: solid #686a6a 1px;
 }
@@ -113,7 +114,7 @@ body, html {
 
 }
 
-.footerSearch input{
+.searchEvents{
 	    width: 120px;
     height: 25px;
     cursor: pointer;
@@ -163,6 +164,18 @@ body, html {
     position: relative;
 }
 
+.eventListing .bottomInfo span{
+	    color: #999999;
+}
+
+.eventListing .bottomInfo span i{
+	    color: #016c40;
+}
+
+.homePage .eventListing .bottomInfo span i{
+	    color: #999999;
+}
+
 nav{
 	    z-index: 2;
     position: relative;
@@ -176,8 +189,13 @@ nav{
 	font-size: 20px;
 }
 .memberDesc {
-	color: #999999;
+	color: #666666;
 	font-weight: 400;
+    font-size: 18px;
+}
+
+.associatedEvents{
+	font-weight: 600;
 }
 .memberImage {
 	height: 250px;
@@ -292,26 +310,36 @@ nav{
 	width: 100%;
 	margin: 0;
 	text-align: center;
+	font-weight: 300;
 	font-family: 'Nunito Sans', sans-serif;
 }
 .mainContactInfoBox {
 	font-family: 'Nunito Sans', sans-serif;
 	width: 100%;
 	display: flex;
-	max-width: 960px;
+	color: #999999;
+	max-width: 1280px;
+	font-size: 18px;
 	margin: auto;
 }
 .nameBox, .phoneBox, .emailBox {
 	margin: auto;
 	position: relative;
 	width: 100%;
+	height: 20px;
+	border: solid lightgrey 1px;
+    color: grey;
 }
 .commentBox {
 	width: calc(100% - 4px);
 	height: 200px;
+	border: solid lightgrey 1px;
+    color: grey;
 }
 .commentBoxContainer {
-	max-width: 960px;
+	max-width: 1280px;
+	font-size: 18px;
+	color: #999999;
 	margin: auto;
 	    width: calc(100% - 4px);
 }
@@ -335,19 +363,24 @@ textarea {
 	background-size: contain;
 }
 .submitBtn {
-	background-color: #016c5c;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 200;
-	height: 20px;
-	width: 65px;
-	padding: 15px;
-	padding-top: 15px;
-	font-size: 16px;
-	margin: auto;
-	color: white;
-	text-align: center;
-	cursor: pointer;
-	margin-top: 20px;
+    background-color: #016c5c;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 200;
+    height: 20px;
+    width: 50px;
+    padding: 20px;
+    border: none;
+    display: flex;
+    padding-top: 15px;
+    font-size: 16px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .innerInfoBox {
 	width: 350px;
@@ -450,17 +483,26 @@ textarea {
 	height: 150px;
 }
 .frequentQuestionsPage {
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: auto;
 	margin-top: 100px;
 	font-family: 'Nunito Sans', sans-serif;
 }
+
+.frequentQuestionsPage .fa{
+	color: #e6e6e6;
+}
 .frequentMainText{
 	cursor:pointer;
 	margin:10px;
+	color: #666666;
+    font-weight: 600;
+    font-size: 22px;
 }
 .frequentFeatureText {
 	color: #999999;
+    font-size: 20px;
+    font-weight: 400;
 	display:block;
 	margin-top: 10px;
     margin-bottom: 10px;
@@ -473,7 +515,8 @@ textarea {
 }
 
 .archiveImageGallery{
-	    max-width: 1024px;
+	    max-width: 1280px;
+	    padding:20px;
     margin: auto;
     font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 50px;
@@ -522,7 +565,7 @@ textarea {
 }
 .bioNameDesc {
 	margin-top: 2px;
-	color: #999999;
+	color: #666666;
 }
 .bioThumbnail i {
 	color: #016C5B;
@@ -607,7 +650,7 @@ textarea {
 	font-family: 'Nunito Sans', sans-serif;
 }
 .sponsorContactContainer {
-	max-width: 1024px;
+	max-width: 1280px;
 	margin: auto;
 	padding: 20px;
 	width: calc(100% - 50px);
@@ -619,7 +662,7 @@ textarea {
 	background-color: #016C5B;
 	display: inline-block;
 	color: white;
-	font-weight: 200;
+	font-weight: 300;
 	padding: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -635,10 +678,16 @@ textarea {
 	margin-top: 50px;
 }
 .sponsorAmount {
-	font-size: 25px;
+	font-size: 35px;
 }
 .sponsorType {
-	font-size: 18px;
+	font-size: 20px;
+	color:#333333;
+}
+
+.sponsorContactDesc{
+	font-size: 20px;
+    color: #666666;
 }
 .sponsorBox span {
 	width: 100%;
@@ -662,7 +711,8 @@ textarea {
 	padding: 20px;
 }
 .foundersLabel {
-	font-weight: 300;
+	font-weight: 400;
+	color:#333333;
 	max-width: 500px;
 	margin: auto;
 	margin-top: 50px;
@@ -680,7 +730,7 @@ textarea {
 	margin-top: 75px;
 }
 .sponsorsPage {
-	max-width: 1024px;
+	max-width: 1280px;
 	text-align: center;
 	margin: auto;
 	font-family: 'Nunito Sans', sans-serif;
@@ -689,13 +739,15 @@ textarea {
 	flex-grow: 1;
 	max-width: 33%;
 	max-height: 70px;
-	margin: 5px;
+	margin: 12px;
 }
 .partnerType {
-	font-weight: 300;
+	font-weight: 400;
+	color:#333333;
 }
 .partnerImageContainer {
 	max-width: 1024px;
+	margin:auto;
 	width: calc(100% - 40px);
 	padding: 20px;
 }
@@ -728,22 +780,29 @@ textarea {
 }
 .goldSponsorsLabel h1 {
 	margin: auto;
-	color: black;
-	font-weight: 300;
+	font-weight: 400;
+	color:#333333;
 }
 .eventListing {
-	max-width: 1024px;
-	width: calc(100% - 40px);
-	padding: 20px;
+	width: 100%;
+	max-width:1280px;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+	padding: 0px;
 	margin: auto;
 	margin-bottom: 50px;
 	margin-top: 50px;
 	font-family: 'Nunito Sans', sans-serif;
 }
 .eventContainer {
-	width: calc(100% - 40px);
-	padding: 20px;
+	width: 100%;
+	padding: 0px;
 	display: inline-block;
+}
+
+.rightSideArchive{
+	max-width: 295px;
 }
 .imageRow {
 	width: 100%;
@@ -769,30 +828,58 @@ textarea {
 .eventInfo .title {
 	width: 100%;
 	float: left;
-	font-size: 26px;
+	font-size: 32px;
 	font-weight: 400;
+	color: #333333;
 	display: inline-block;
 }
-.bottomInfo i {
-	color: #016C5B;
+
+.eventInfo .eventDesc {
+	font-size: 21px;
+}
+
+.eventDesc{
+color:#666666;
+}
+
+
+.upperMainEvent .bottomInfo i {
+	color: #999999;
+}
+
+.upperMainEvent .bottomEventTime {
+	color: #999999;
+}
+
+.upperMainEvent .bottomEventDate {
+	color: #999999;
+}
+
+.lowerEvents .bottomInfo i {
+	color: #999999;
+}
+
+.lowerEvents .bottomEventTime {
+	color: #999999;
+}
+
+.lowerEvents .bottomEventDate {
+	color: #999999;
 }
 
 .upperMainEvent .learnEvent{
-	margin: auto;
     margin-right: 1px;
 }
 
 .footerSearch span{
 	margin-left: 5px;
 }
-.upperMainEvent .bottomInfo{
-	justify-content:space-around;
-}
+
 .greenBar {
 	height: 12.5px;
 	margin: 0;
 	padding: 0;
-	background-color: #016C5B
+	background-color: #016c40;
 }
 .learnEvent {
 	display: inline-block;
@@ -822,27 +909,30 @@ textarea {
 .bottomInfo{
     height: auto;
     align-items: center;
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-top: 0.5px solid #e1dede;
 }
 .bottomEventDate {
 	margin: 15px;
 	margin-left: 0;
 }
 
-.bottomEventDate,.bottomEventTime {
-font-size: 13px;
+.bottomEventDate,.bottomEventTime, .bottomEventLocation {
+font-size: 16px;
 }
 .pastEvents {
 	width: 100%;
 	padding: 20px;
 	display: inline-block;
+	font-size:20px;
 	width: calc(100% - 40px);
 	color: #666666;
 }
 .eventArchive {
-	max-width: 1024px;
+	max-width: 1280px;
 	width: calc(100% - 40px);
 	padding: 20px;
 	margin: auto;
@@ -858,6 +948,14 @@ font-size: 13px;
 	float: left;
 	width: 50%;
 }
+
+.innerRightSideArchive{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
 .rightSideArchive {
 	display: inline-block;
 	float: right;
@@ -877,22 +975,52 @@ font-size: 13px;
 	margin: 5px;
 }
 .archiveInfo {
-	margin-top: 10px;
 	margin-bottom: 10px;
+}
+.archiveEventTime{
+	margin-left: 20px;
+}
+
+.archiveEventLocation{
+	display:flex;
 }
 .pastEvents i {
 	color: #016C5B;
 	font-size: 18px;
 	margin-right: 6px;
 }
+.shareEventButtons i{
+	font-size: 45px;
+	cursor:pointer;
+}
 .archiveEventPrice, .archiveEventFood {
-	float: right;
+	display:flex;
 }
 .secondTime {
 	padding-left: 22px;
 }
 .firstTime {
 	margin-left: 22px;
+}
+
+.memberReadMore{
+	color: #999999;
+    font-weight: 400;
+    width: 100%;
+}
+
+.eventInteract .registerLink{
+	width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #01486C;
+    font-weight: 300;
+    color: white;
+}
+
+.memberReadMore a{
+	text-decoration: none;
+	color:#016c5b;
 }
 .archiveEventLocation span {
 	margin-left: 24px;
@@ -913,12 +1041,18 @@ font-size: 13px;
 	color: white;
 	font-weight: 300;
 	padding: 10px;
-	width: 100%;
+	width: calc(100% - 40px);
 	max-width: 300px;
 	margin: 10px;
 }
 .upcomingEvents i {
 	color: #01486C;
+}
+
+.timeHeader{
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
 }
 
 .pastEventSocial {
@@ -930,7 +1064,7 @@ font-size: 13px;
 }
 .pressCoveredEvent a {
 	color: #006c3f;
-	width: 100%;
+	width: calc(100% - 10px);
 	text-decoration: none;
 	font-weight: 600;
 	display: inline-block;
@@ -961,6 +1095,7 @@ font-size: 13px;
 }
 .featuredEventVideo {
 	text-align: center;
+	padding:20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -971,16 +1106,9 @@ font-size: 13px;
 	display: inline-flex;
 	flex-wrap: wrap;
 }
-.eventInteract div {
-	width: 100%;
-	padding: 15px;
-	margin-bottom: 15px;
-	background-color: #01486C;
-	font-weight: 300;
-	color: white;
-}
+
 .eventDetails {
-	max-width: 1024px;
+	max-width: 1280px;
 	margin: auto;
 }
 .eventInteract span {
@@ -1021,6 +1149,12 @@ font-size: 13px;
 
 .searchEvents::placeholder {
    font-family: FontAwesome;
+}
+
+.searchResults{
+	 -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .archiveLink a{
@@ -1067,14 +1201,17 @@ font-size: 13px;
 }
 .eventPartners h1 {
 	width: 100%;
+	font-size:35px;
 	font-weight: 400;
 }
 .eventSponsor h1 {
 	width: 100%;
+	font-size:35px;
 	font-weight: 400;
 }
 .centeredBodyTextContainer h1 {
 	font-weight: 400;
+	font-size:42px;
 }
 .centeredBodyTextContainer p {
 	color: #666666;
@@ -1088,6 +1225,8 @@ font-size: 13px;
 }
 .eventTitleContainer h1 {
 	margin-bottom: 0px;
+	font-weight: 400;
+    font-size: 35px;
 }
 .eventTitleContainer {
 	padding: 20px;
@@ -1097,6 +1236,8 @@ font-size: 13px;
 	display: none;
 }
 .boardContainer {
+	max-width: 1280px;
+	margin:auto;
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
@@ -1115,8 +1256,10 @@ font-size: 13px;
 	display: flex;
 }
 .lowerEvents, .mainEvents, .upperMainEvent {
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: auto;
+	    display: flex;
+    justify-content: center;
 }
 .upperMainEvent .eventListing {
 	max-width: 100%;
@@ -1129,12 +1272,12 @@ font-size: 13px;
 	margin-top: 50px;
 }
 .joinEvent h1 {
-	font-size: 32px;
+	font-size: 60px;
 	color: #999999;
 	font-weight: 400;
 }
 .joinEvent h2 {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 400;
 	color: #999999;
 }
@@ -1162,13 +1305,13 @@ font-size: 13px;
 	margin: auto;
 	position: relative;
 	margin-left: 10%;
-	margin-top: 20%;
+	margin-top: 10%;
 }
 .homePageHeroContainer h1 {
-	font-size: 50px;
+	font-size: 62px;
 }
 .homePageHeroContainer p {
-	font-size: 30px;
+	font-size: 40px;
 }
 .homePageHeroContainer .learnMore {
 	color: black;
@@ -1180,10 +1323,11 @@ font-size: 13px;
 }
 .moreEvents {
 	color: black;
-	display: inline-block;
+	display: flex;
 	background-color: #E6E6E6;
 	padding: 15px;
 	margin: auto;
+	justify-content: center;
 	position: relative;
 	width: 120px;
 	cursor: pointer;
@@ -1223,12 +1367,15 @@ font-size: 13px;
 	width: 100%;
 	font-weight: 500;
 	font-size: 40px;
-	margin-top: 100px;
+	margin-top: 100px;	
+	font-size: 60px;
+	margin-bottom: 0px;
 }
 .archiveHeroText p {
 	display: inline-block;
-	font-size: x-large;
+	font-size: 24px;
 	max-width: 600px;
+
 }
 .archiveLink {
 	display: inline-block;
@@ -1240,8 +1387,9 @@ font-size: 13px;
 .statsContainer {
 	display: flex;
 	width: 100%;
-	max-width: 1024px;
+	max-width: 1280px;
 	margin: auto;
+	margin-bottom:20px;
 }
 .statVideo {
 	width: 50%;
@@ -1251,7 +1399,7 @@ font-size: 13px;
 }
 .statText {
 	width: calc(50% - 40px);
-	margin: 20px;
+	margin: auto;
 	min-height: 500px;
 	display: flex;
 	flex-wrap: wrap;
@@ -1259,6 +1407,7 @@ font-size: 13px;
 .statText h1 {
 	font-weight: 400;
 	color: #666666;
+	font-size:30px;
 	text-align: center;
 	width: 100%;
 }
@@ -1274,8 +1423,8 @@ font-size: 13px;
 	width: 100%;
 	height: auto;
 	display: inline-block;
-	font-size: 25px;
-	color: #333333;
+	font-size: 48px;
+	color: #666666;
 }
 .stat i {
 	font-size: 60px;
@@ -1290,6 +1439,7 @@ font-size: 13px;
 .statText .innerContainer {
 	display: flex;
 	flex-wrap: wrap;
+	margin:auto;
 }
 .actionHero {
 	background-color: #016C40;
@@ -1319,13 +1469,12 @@ font-size: 13px;
 }
 .moreSponsors {
 	color: black;
-	display: inline-block;
+	display: flex;
 	background-color: #E6E6E6;
 	padding: 15px;
-	/* margin: auto; */
+	margin: auto;
 	position: relative;
-	left: 50%;
-	margin-left: -87.5px;
+	justify-content: center;
 	width: 120px;
 	cursor: pointer;
 	text-align: center;
@@ -1333,11 +1482,17 @@ font-size: 13px;
 	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+.moreSponsorsContainer a{
+	text-decoration: none;
+}
+
 .fortyFiveDollar {
 	margin-left: 22px;
 }
 .moreSponsorsContainer {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	margin-bottom: 50px;
 }
@@ -1726,11 +1881,163 @@ nav .subMenu li:hover>.SuperSubMenu{
 	text-decoration:none;
 	color:inherit;
 }
+
+.memberLabel{
+    position: absolute;
+    float: right;
+    max-width: 42px;
+    margin-left: 153px;
+    margin-top: 225px;
+}
+
+.memberLabel span{
+	padding-right: 7px;
+    position: relative;
+    height: 25px;
+    padding-left: 5px;
+    float: right;
+    font-size:16px;
+    color:#333333;
+    display: flex;
+    align-items: center;
+    right: 0;
+    background-color: rgb(190, 193, 192);
+    position: relative;
+    background-color: rgba(190, 193, 192, 0.9);
+}
+
+.archiveImageGallery p{
+	text-align: right;
+	padding-right:20px;
+}
+
+.archiveImageGallery h1{
+	text-align: center;
+}
+
+.upcomingEvents{
+	width: 260px;
+    margin: auto;
+}
+.upcomingEvents .socialContainer{
+	display: inline-block;
+    margin: auto;
+    text-align: left;
+}
+
+.hiddenEvents h1{
+	font-weight: 400;
+}
+
+	.lowerEvents {
+		flex-wrap: wrap;
+	}
+
+.shareEventBtn{
+	cursor:pointer;
+}
+
+.shareEventButtons{
+	height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.addToCalendar{
+	    width: calc(50% - 40px);
+    padding: 15px;
+    margin-bottom: 15px;
+    margin: 5px;
+    background-color: #01626C;
+    font-weight: 300;
+    color: white;
+}
+
+.basicTemplate{
+	max-width: 1200px;
+	    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.basicTemplate a{
+	color: #006c3f;
+    text-decoration: none;
+}
+
+.basicTemplate h1{
+	font-size:35px;
+}
+
+.basicTemplate img{
+	max-width: 100%;
+    height: auto;
+}
+
+.basicTemplate iframe{
+	width: 100%;
+    min-height: 500px;
+}
+
+.upperMainEvent .eventListing{
+	width: calc(100% - 40px);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.lowerEvents .eventListing{
+    width: calc(100% - 40px);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.upperMainEvent .title{
+	font-size:32px;
+}
+
+.upperMainEvent .eventDesc{
+	font-size:21px;
+}
+
+.lowerEvents .title{
+		font-size:32px;
+
+}
+
+.lowerEvents .eventDesc{
+	font-size:21px;
+
+}
+
+	.learnEvent {
+		background-color: #016c40;
+	}
+
+	.lowerEvents .learnEvent{
+		background-color:#01626c;
+	}
+		.lowerEvents .greenBar{
+		background-color:#01626c;
+	}
+
 @media screen and (min-width:1024px) {
 .fullMenu{
 	display:none;
 }
 }
+
+@media screen and (max-width:1280px) {
+	.eventListing{
+	    width: calc(100% - 40px);
+	    padding: 20px;
+	    }
+	    }
+
 @media screen and (max-width:1075px) {
 	.socialContainer i {
 		font-size: 20px;
@@ -1774,6 +2081,13 @@ nav .subMenu li:hover>.SuperSubMenu{
 		font-size: 18px;
 		margin-right: 6px;
 	}
+	.archiveHeroText h1 {
+    font-size: 40px;
+		}
+
+	.shareEventButtons i{
+		font-size:30px;
+	}
 
 	.lowerInfo{
 		text-align: center;
@@ -1806,6 +2120,13 @@ nav .subMenu li:hover>.SuperSubMenu{
 	display:flex;
 }
 
+.moreEvents {
+	margin:0;
+	}
+	.moreSponsors {
+	margin:0;
+	}
+
 	.hamburgerMenu{
 		display: inline-flex;
 		cursor:pointer;
@@ -1825,6 +2146,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 }
 	.archiveEventPrice, .archiveEventFood {
 		float: left;
+		width:100%;
 	}
 	.rightSideArchive {
 		float: none;
@@ -1893,9 +2215,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 		flex-wrap: wrap;
 		margin-top: 50px;
 	}
-	.attendanceContainer, .upcomingEvents {
-		display: none;
-	}
+
 	.hiddenAttendance {
 		display: flex;
 		margin: auto;
@@ -1980,7 +2300,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 	.learnEvent {
 		display: inline-block;
 		padding: 5px;
-		background-color: #016C5B;
+		background-color: #016c40;
 		color: white;
 		font-weight: 200;
 		height: 25px;
@@ -2007,10 +2327,6 @@ nav .subMenu li:hover>.SuperSubMenu{
 		max-width:500px;
 	}
 
-
-	.lowerEvents {
-		flex-wrap: wrap;
-	}
 	.stat {
 		width: 25%;
 	}
@@ -2072,6 +2388,13 @@ nav .subMenu li:hover>.SuperSubMenu{
 	.donationDescContainer {
 		margin-bottom: 20px;
 	}
+
+		.homePageHeroContainer h1 {
+	font-size: 40px;
+}
+.homePageHeroContainer p {
+	font-size: 30px;
+}
 }
 @media screen and (max-width: 500px) {
 	.bioThumbnail i {
@@ -2083,6 +2406,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 	.learnEvent {
 		float: none;
 	}
+
 	.membershipDetailsContainer {
 		padding: 10px;
 		max-width: 960px;

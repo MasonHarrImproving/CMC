@@ -49,7 +49,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         </div>
         <div class="eventInfo">
         <h1 class="title">'.get_post_custom($post->ID)['event_title'][0].'</h1>
-        <p class="eventDesc">'.get_post_custom($post->ID)['event_description'][0].'</p>
+        <p class="eventDesc">'.get_post_custom($post->ID)['event_short_description'][0].'</p>
         <div class="bottomInfo">
           <span class="bottomEventDate"><i class="fa fa-calendar"></i> '.date("F jS Y", strtotime(get_post_custom($post->ID)['event_date'][0])).'</span>
           <span class="bottomEventTime"><i class="fa fa-clock-o"></i> '.get_post_custom($post->ID)['event_start_time'][0].' - '.get_post_custom($post->ID)['event_end_time'][0].'</span>

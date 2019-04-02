@@ -1,7 +1,7 @@
 <?php
 
 /*
-    Template Name: Social Admin Template
+    Template Name: Menu Admin Template
 */
     
     get_header();

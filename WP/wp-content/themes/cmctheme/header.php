@@ -83,24 +83,24 @@
     <div class="socialContainer">
         <ul class="navTextGroup">
         <li class="navImg facebook">
-          <a class="socialLink" target="_blank" href="https://facebook.com/cbusmetroclub/">
+          <a class="socialLink" target="_blank" href="<?php the_field('menu_facebook');?>">
           <i class="fa fa-facebook-square"></i>
 </a>
         </li>
         <li class="navImg linkedin">
-          <a class="socialLink" target="_blank" href="https://www.linkedin.com/companies/cbusmetroclub">
+          <a class="socialLink" target="_blank" href="<?php the_field('menu_linkedin');?>">
           <i class="fa fa-linkedin-square"></i>
         </a>
       </li>
         <li class="navImg twitter">
-          <a class="socialLink" target="_blank" href="https://twitter.com/cbusmetroclub">
+          <a class="socialLink" target="_blank" href="<?php the_field('menu_twitter');?>">
           <i class="fa fa-twitter-square"></i>
         </a></li>
-        <li class="navImg instagram"><a class="socialLink" target="_blank" href="https://www.instagram.com/cbusmetroclub/">
+        <li class="navImg instagram"><a class="socialLink" target="_blank" href="<?php the_field('menu_instagram');?>">
           <i class="fa fa-instagram"></i>
         </a></i></li>
         <li class="navImg youtube">
-          <a class="socialLink" target="_blank" href="https://www.youtube.com/user/adrewbart">
+          <a class="socialLink" target="_blank" href="<?php the_field('menu_youtube');?>">
           <i class="fa fa-youtube-square"></i>
         </a></li>
         </ul>
@@ -113,9 +113,6 @@
       </ul>
 </nav>
       <div class="fullMenu">
-        <div class="fullMenuSelection">
-          <a href="#">Events</a>
-        </div>
                 <div class="fullMenuSelection">
           <?php echo '<a href="'. home_url().'?page_id=348'.'">Upcoming Events</a>';?>
         </div>

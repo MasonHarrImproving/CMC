@@ -6,25 +6,27 @@
     get_template_part('template-parts/shared/content-hero');
 ?>
 <section class="contactContainer mainElement">
+    <form id="formid" action="" method="POST">
     <div class="mainContactInfoBox">
         <div class="nameBoxContainer">
             <p class="mainInfoText"><?php the_field('name_box_label'); ?></p>
-            <input class="nameBox">
+            <input type="text" name="namebox" class="nameBox">
         </div>
         <div class="emailBoxContainer">
             <p class="mainInfoText"><?php the_field('email_box_label'); ?></p>
-            <input class="emailBox">
+            <input type="text" name="emailBox" class="emailBox">
         </div>
         <div class="phoneBoxContainer">
             <p class="mainInfoText"><?php the_field('number_box_label'); ?></p>
-            <input class="phoneBox">
+            <input type="text" name="phoneBox" class="phoneBox">
         </div>
     </div>
     <div class="commentBoxContainer">
         <p class="mainInfoText"><?php the_field('comment_box_label'); ?></p>
-        <textarea class="commentBox"></textarea>
-        <div class="submitBtn"><?php the_field('contact_submit_button'); ?></div>
+        <textarea name="comments" class="commentBox"></textarea>
+        <div class="submitBtn">Submit</div>
     </div>
+</form>
     <div class="mapOfLocation" style="background-image:url(<?php bloginfo('template_url') ?>/images/maps.png)">
         <div class="innerInfoBox">
             <h1><?php the_field('contact_label'); ?></h1>
@@ -38,6 +40,21 @@
         </div>
     </div>
 </section>
+<script>
+    $('.submitBtn').click(function(){
+        console.log($('form#formid').serialize());
+    });
+  $('.submitBtn').click( function() {
+    // $.ajax({
+    //     url: 'url',
+    //     type: 'post',
+    //     dataType: 'json',
+    //     data: $('form#formid').serialize(),
+    //     success: function(data) {
+    //              }
+    // });
+});
+</script>
 <?php
     get_footer();
 ?>

@@ -36,6 +36,9 @@
       for($i = 1; $i <= 4; $i++){
         $memberImage = get_field('member_image_'.$i);
       echo '<div class="member">';
+      echo '<div class="memberLabel"><span>';
+      echo the_field("member_label_".$i);
+      echo'</span></div>';
         echo '<img class="memberImage" src="'.$memberImage["url"].'" height="250" width="200">';
         echo '<span class="memberName">';
         echo the_field('member_title_'.$i).'<br>';

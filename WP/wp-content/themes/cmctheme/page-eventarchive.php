@@ -33,14 +33,22 @@
             <div class="pastEvents">
         <div class="pastEventDesc">
           <div class="pastEventUpperDetails">
-   <div class="leftSideArchive">
+    <div class="leftSideArchive">
     <span class="archiveEventDate archiveInfo"><?php if(strlen($post["event_date"][0]) > 0){ echo '<i class="fa fa-calendar-o"></i>'.date("F jS Y", strtotime($post["event_date"][0]));}?></span>
-       <div class="archiveEventTime archiveInfo"><?php if(strlen($post["event_start_time"][0]) > 0){ echo '<i class="fa fa-clock-o"></i>'.$post["event_start_time"][0].'-'.$post["event_end_time"][0]; }?></div>
+    <div class="timeHeader"><i class="fa fa-clock-o"></i><?php echo $post["details_times_time_1_header"][0];?></div>
+       <div class="archiveEventTime archiveInfo"><?php echo $post["details_times_time_1"][0];?></div>
+       <?php if(strlen($post["details_times_time_2_header"][0]) > 0){?>
+           <div class="timeHeader"><i class="fa fa-clock-o"></i><?php echo $post["details_times_time_2_header"][0];?></div>
+       <div class="archiveEventTime archiveInfo"><?php echo $post["details_times_time_2"][0];?></div>
+     <?php }?>
+
        <div class="archiveEventLocation archiveInfo"><?php if(strlen($post["event_location"][0]) > 0){ echo '<i class="fa fa-map-pin"></i>'.$post["event_location"][0].'<br>'.$post["event_street"][0].'<br>'.$post["event_city"][0]; }?></div>
     </div>
      <div class="rightSideArchive">
+      <div class="innerRightSideArchive">
     <span class="archiveEventPrice archiveInfo"><?php if(strlen($post["event_member_price"][0]) > 0){ echo '<i class="fa fa-ticket"></i>'.$post["event_member_price"][0].' for members<br>'.$post["event_guest_price"][0].' for guests'; }?></span>
        <div class="archiveEventFood archiveInfo"><?php if(strlen($post["event_food_choices"][0]) > 0){ echo '<i class="fa fa-spoon"></i>'.$post["event_food_choices"][0];}?></div>
+    </div>
     </div>
           </div>
       <div class="pastEventLowerDetails">
@@ -55,9 +63,11 @@
 </div>
 <div class="upcomingEvents">
 <h1 class="followText">Follow On Social Media</h1>
+<div class="socialContainer">
   <div class="pastEventSocial"><i class="fa fa-hashtag"></i> <?php echo $post["event_hashtag"][0]?> </div>
   <div class="pastEventSocial"><i class="fa fa-twitter"></i><?php echo $post["event_twitter"][0]?></div>
   <div class="pastEventSocial"><i class="fa fa-instagram"></i> <?php echo $post["event_instagram"][0]?></div>
+</div>
   <span></span>
 
 </div>
@@ -71,9 +81,13 @@
                     }
                     else{
                           echo '<div class="member">
+                        <div class="memberLabel"><span>';
+                       echo get_post_custom($speakers[$m])["label"][0];
+              echo'</span></div>
         <a href="'.home_url().'?page_id=355&speaker_id='.$speakers[$m].'"><img class="memberImage" src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($speakers[$m])["image"][0])["_wp_attached_file"][0].'" height="250" width="200"></a>
         <span class="memberName">'.get_post_custom($speakers[$m])["name"][0].'<br></span>
         <span class="memberDesc">'.get_post_custom($speakers[$m])["title"][0].'<br>'.get_post_custom($speakers[$m])["subtitle"][0].'</span>
+                <div class="memberReadMore"><a href="'.home_url().'?page_id=355&speaker_id='.$speakers[$m].'">Read More</a></div>
       </div>';
     }
                 }
@@ -91,7 +105,15 @@
           }
           ?>
     </div>
-              <?php if($post["video_link"][0]){
+              <?php
+
+              if($post["podcast_video"][0]){
+    echo '<div class="featuredEventVideo">
+      <h1>'.$post["podcast_video_name"][0].'</h1>
+      <iframe width="560" height="315" src="'.$post["podcast_video"][0].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>';
+  }
+               if($post["video_link"][0]){
     echo '<div class="featuredEventVideo">
       <h1>'.$post["video_name"][0].'</h1>
       <iframe width="560" height="315" src="'.$post["video_link"][0].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -102,7 +124,9 @@
     <section class="archiveImageGallery">
 <?php 
 if(isset($post["image_gallery"][0])){
+  echo '<h1>'.$post["gallery_title"][0].'</h1>';
 echo do_shortcode('[modula id="'.$post["image_gallery"][0].'"]'); 
+  echo '<p>'.$post["gallery_credits"][0].'</p>';
 }
 ?>
 </section>

@@ -87,6 +87,10 @@ function benefit_logo_meta_box($post) { ?>
 			<option value="gold" <?php selected($benefit_level, 'gold'); ?>>Gold</option>
 			<option value="silver" <?php selected($benefit_level, 'silver'); ?>>Silver</option>
 			<option value="bronze" <?php selected($benefit_level, 'bronze'); ?>>Bronze</option>
+			<option value="regular" <?php selected($benefit_level, 'regular'); ?>>Regular</option>
+			<option value="company" <?php selected($benefit_level, 'company'); ?>>Company</option>
+			<option value="pro" <?php selected($benefit_level, 'pro'); ?>>Young Professional</option>
+			<option value="leader" <?php selected($benefit_level, 'leader'); ?>>Seasoned Leader</option>
 		</select>
 	</div>
 	

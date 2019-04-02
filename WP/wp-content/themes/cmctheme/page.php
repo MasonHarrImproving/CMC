@@ -12,24 +12,20 @@
 get_header();
 
 ?>
-
+    
 <?php 
 $heroimage = get_field('home_page_hero_image');
-$mainevent = get_field('main_event');
-$subevent1 = get_field('sub_event_1');  
-$subevent2 = get_field('sub_event_2');
 $cmcstats = get_field('stats');
-$featuredevents = [];   
 
       $getevents = array(
             'post_type' => 'event',
-            'posts_per_page' => 2,
+            'posts_per_page' => 3,
+            'order' => 'DESC',
         );
         
         $events = new WP_Query($getevents);
     ?>
-
-	<section class="homePage">
+  <section class="homePage">
     <div class="homePageHero" style="background-image:url(<?php echo $heroimage['url'];?>)">
       <div class="homePageHeroDarkener">
     <div class="homePageHeroContainer"><h1><?php the_field('home_page_hero_title'); ?></h1><p><?php the_field('home_page_hero_description'); ?></p><div class="learnMore">
@@ -40,89 +36,78 @@ $featuredevents = [];
 
 
     </div>
-    <div class="joinEvent"><h1><?php the_field('under_hero_text_title'); ?></h1><h2><?php the_field('under_hero_text_description'); ?></h2></div>
-    <div class="upperMainEvent">
+    <div class="joinEvent"><h1><?php the_field('under_hero_text_title'); ?></h1><h2><?php the_field("under_hero_text_description"); ?></h2></div>
+      <?php 
+            if ($events -> have_posts()) {
+        $posts = $events->posts;
+        $i=0;
+        foreach($posts as $post) {
+          $i++;
+        if($i === 1){
+    echo '<div class="upperMainEvent">
     <section class="eventListing">
       <div class="eventContainer">
         <div class="greenBar"></div>
-        <div class="imageRow">
-        <?php echo '<img src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($mainevent["event"]->ID)["event_image"][0])["_wp_attached_file"][0].'">';?>
+        <div class="imageRow"><img src="'.home_url().'/wp-content/uploads/'.get_post_custom(get_post_custom($post->ID)["event_image"][0])["_wp_attached_file"][0].'">
         </div>
         <div class="eventInfo">          
-        <h1 class="title"><?php echo get_post_custom($mainevent["event"]->ID)['event_title'][0];?></h1>
-        <p class="eventDesc"><?php echo get_post_custom($mainevent["event"]->ID)['event_description'][0];?></p>
+        <h1 class="title">'.get_post_custom($post->ID)["event_title"][0].'</h1>
+        <p class="eventDesc">'.get_post_custom($post->ID)["event_short_description"][0].'</p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F jS Y", strtotime(get_post_custom($mainevent["event"]->ID)['event_date'][0])); ?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($mainevent["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($mainevent["event"]->ID)['event_end_time'][0];?></span>
-          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
-          if(strtotime(get_post_custom($mainevent["event"]->ID)['event_date'][0]) < time()){
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> '.date("F jS Y", strtotime(get_post_custom($post->ID)["event_date"][0])).'</span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> '.get_post_custom($post->ID)["event_start_time"][0].' - '.get_post_custom($post->ID)["event_end_time"][0].'</span>
+          <div class="learnEvent"><a href="'. home_url().'?page_id=';
+          if(strtotime(get_post_custom($post->ID)["event_date"][0]) < time()){
               echo "417";
                 }
                 else{
                   echo '374';
                 }
-          echo '&info_id='.$mainevent["event"]->ID.'">'?><?php echo $mainevent['button'];?>
-        </a></div>
+          echo '&info_id='.$post->ID.'">Learn More';
+        echo '</a></div>
         </div>
       </div>
       </div>
-    </section>
-  </div>
-  <div class="lowerEvents">
-    <section class="eventListing">
+    </section></div>';
+            }
+        else if($i > 1){
+echo '<div class="lowerEvents">
+<section class="eventListing">
       <div class="eventContainer">
         <div class="greenBar"></div>
         <div class="eventInfo">
-        <h1 class="title"><?php echo get_post_custom($subevent1["event"]->ID)['event_title'][0];?></h1>
-        <p class="eventDesc"><?php echo get_post_custom($subevent1["event"]->ID)['event_description'][0];?></p>
+        <h1 class="title">'.get_post_custom($post->ID)["event_title"][0].'</h1>
+        <p class="eventDesc">'.get_post_custom($post->ID)["event_short_description"][0].'</p>
         <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F j Y", strtotime(get_post_custom($subevent1["event"]->ID)['event_date'][0]));?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent1["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent1["event"]->ID)['event_end_time'][0];?></span>
-          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
-          if(strtotime(get_post_custom($subevent1["event"]->ID)['event_date'][0]) < time()){
+          <span class="bottomEventDate"><i class="fa fa-calendar"></i> '.date("F j Y", strtotime(get_post_custom($post->ID)["event_date"][0])).'</span>
+          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> '.get_post_custom($post->ID)["event_start_time"][0].' - '.get_post_custom($post->ID)["event_end_time"][0].'</span>
+          <div class="learnEvent"><a href="'. home_url().'?page_id=';
+          if(strtotime(get_post_custom($post->ID)["event_date"][0]) < time()){
               echo "417";
                 }
                 else{
                   echo '374';
                 }
-          echo '&info_id='.$subevent1["event"]->ID.'">'?><?php echo $subevent1['button'];?>
-        </a></div>
+          echo '&info_id='.$post->ID.'">Learn More';
+          echo '</a></div>
         </div>
       </div>
       </div>
-    </section>
-    <section class="eventListing">
-      <div class="eventContainer">
-        <div class="greenBar"></div>
-        <div class="eventInfo">
-        <h1 class="title"><?php echo get_post_custom($subevent2["event"]->ID)['event_title'][0];?></h1>
-        <p class="eventDesc"><?php echo get_post_custom($subevent2["event"]->ID)['event_description'][0];?></p>
-        <div class="bottomInfo">
-          <span class="bottomEventDate"><i class="fa fa-calendar"></i> <?php echo date("F jS Y", strtotime(get_post_custom($subevent2["event"]->ID)['event_date'][0])); ?></span>
-          <span class="bottomEventTime"><i class="fa fa-clock-o"></i> <?php echo get_post_custom($subevent2["event"]->ID)['event_start_time'][0];?> - <?php echo get_post_custom($subevent2["event"]->ID)['event_end_time'][0];?></span>
-          <div class="learnEvent"><?php echo '<a href="'. home_url().'?page_id=';
-          if(strtotime(get_post_custom($subevent2["event"]->ID)['event_date'][0]) < time()){
-              echo "417";
-                }
-                else{
-                  echo '374';
-                }
-          echo '&info_id='.$subevent2["event"]->ID.'">'?><?php echo $subevent2['button'];?>
-        </a></div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-  </div>
+    </section></div>';
+            }
+          }
+          wp_reset_query();
+      }
+      wp_reset_query();
+    ?>
   <div class="moreEventsContainer">
   <div class="moreEvents">
+    <?php echo the_field('more_events_button');?>
             <?php echo '<a href="'.home_url().'?page_id='.'348'.'">';?>
-    <?php the_field('more_events_button');?>
   </a>
     </div>
   </div>
-  <div class="archiveHero">
+  <div class="archiveHero" style="background-image:url(<?php echo the_field('missed_forum_image');?>);">
     <div class="imageLightener">
     <div class="archiveHeroText">
     <?php the_field('archive_text_title');?>
@@ -133,10 +118,10 @@ $featuredevents = [];
     </div>
 </div>
     <div class="joinEvent">
-<?php the_field('under_archive_title');?>
+<?php echo the_field('under_archive_title');?>
     </div>
     <div class="statsContainer">
-    <div class="statVideo"><iframe width="560" height="315" src="<?php the_field('stats_video');?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+    <div class="statVideo"><iframe width="560" height="315" src="<?php echo the_field('stats_video');?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
     <div class="statText"><h1><?php echo $cmcstats['title'];?></h1>
       <div class="innerContainer">
 <div class="membersStat stat"><i class="fa fa-users"></i><span><?php echo $cmcstats['members'];?></span>
@@ -154,14 +139,14 @@ $featuredevents = [];
   <div class="archiveHero">
     <div class="imageLightener actionHero">
     <div class="archiveHeroText">
-    <?php the_field('action_area_title');?>
-    <p><?php the_field('action_area_description');?></p>
-    <div class="joinActionBtnContainer"><div class="joinAction"><?php the_field('action_area_button');?></div>
+    <?php echo the_field('action_area_title');?>
+    <p><?php echo the_field('action_area_description');?></p>
+    <div class="joinActionBtnContainer"><div class="joinAction"><?php echo the_field('action_area_button');?></div>
 </div>
     </div>
     </div>
 </div>
-    <div class="joinEvent"><?php the_field('sponsors_info');?></div>
+    <div class="joinEvent"><?php echo the_field('sponsors_info');?></div>
         <div class="partnersContainer">
       <div class="partnerImageContainer">
         <?php $fields = acf_get_fields('78'); ?>
@@ -184,7 +169,7 @@ $featuredevents = [];
         <?php echo '<a href="'.home_url().'?page_id='.'33'.'">';?>
   <div class="moreSponsors">
        <?php
-       the_field('more_sponsors_button');?>
+       echo the_field('more_sponsors_button');?>
     </div>
   </a>
   </div>

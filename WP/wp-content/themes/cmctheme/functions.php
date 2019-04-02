@@ -249,6 +249,12 @@ function cmctheme_colors_css_wrap() {
 }
 add_action( 'wp_head', 'cmctheme_colors_css_wrap' );
 
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page();
+    acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
+}
+
 function update_meta_data_for_post($post_id, $orig_val, $new_val, $meta_key) {
 	// if ($orig_val == null && $new_val != null) {
 	// 	add_post_meta($post_id, $meta_key, $new_val);

@@ -37,6 +37,9 @@
         
         $goldquery = new WP_Query($gold_args);
     ?>
+    <?php
+    get_template_part('template-parts/shared/content-hero');
+?>
 
 
 <section class="sponsorsPage">
@@ -87,7 +90,7 @@
        if ( $goldquery->have_posts() ) {
         $goldcount = 0;
     $goldposts = $goldquery->posts;
-            echo '<div class="goldSponsersLabel" style="width: 100%;"><h1 style="margin: auto;color: black; font-weight: 300;">Gold Sponsors</h1></div>';
+            echo '<div class="goldSponsorsLabel"><h1>Gold Sponsors</h1></div>';
         foreach($goldposts as $post) {
         if($goldcount == 0){
             $goldcount++;
@@ -115,7 +118,7 @@
        if ( $bronzequery->have_posts() ) {
         $bronzecount = 0;
     $bronzeposts = $bronzequery->posts;
-            echo '<div class="goldSponsersLabel" style="width: 100%;"><h1 style="margin: auto;color: black; font-weight: 300;">Bronze Sponsors</h1></div>';
+            echo '<div class="goldSponsorsLabel"><h1>Bronze Sponsors</h1></div>';
         foreach($bronzeposts as $post) {
         if($bronzecount == 0){
             $bronzecount++;
