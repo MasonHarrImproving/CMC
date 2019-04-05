@@ -15,7 +15,7 @@ wp_footer();
 ?>
      <div class="spacing"></div>
     <div class="footerContainer">
-      <div class="logoBox">  <?php echo '<img class="footerLogo" src="'.home_url().'/wp-content/uploads/2019/03/cmclogo.png'.'">';?></div>
+      <div class="logoBox">  <?php echo '<img class="footerLogo" src="' . home_url() . '/wp-content/uploads/2019/03/cmclogo.png' . '">'; ?></div>
       <div class="contactBox">
         <p class="contactText">Contact</p>
         <p class="contactNumber">614-464-3220</p>
@@ -41,11 +41,11 @@ wp_footer();
             <div class="innerLowerInfo">
             <span>About</span>
             <span>
-              <?php echo '<a href="'. home_url().'?page_id=348'.'">Events</a>';?>
+              <?php echo '<a href="' . home_url() . '?page_id=348' . '">Events</a>'; ?>
             </span>
             <span><a href="https://columbusmetroclub.wildapricot.org/membership">Join</a></span>
             <span><a href="https://columbusmetroclub.wildapricot.org/donate">Donate</a></span>
-            <span> <?php echo do_shortcode('[wa_login login_label="Log in" redirect_page="'.home_url().'"]');?></span>
+            <span> <?php echo do_shortcode('[wa_login login_label="Log in" redirect_page="' . home_url() . '"]'); ?></span>
           </div>
           </div>
 </body>
