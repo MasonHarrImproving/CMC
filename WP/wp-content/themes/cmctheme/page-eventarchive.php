@@ -24,6 +24,11 @@
                 
               }
             }
+
+            // check if the repeater field has rows of data
+
+
+
 ?>
  <section class="eventDetails">
       <div class="eventTitleContainer">
@@ -46,7 +51,14 @@
     </div>
      <div class="rightSideArchive">
       <div class="innerRightSideArchive">
-    <span class="archiveEventPrice archiveInfo"><?php if(strlen($post["event_member_price"][0]) > 0){ echo '<i class="fa fa-ticket"></i>'.$post["event_member_price"][0].' for members<br>'.$post["event_guest_price"][0].' for guests'; }?></span>
+    <span class="archiveEventPrice archiveInfo">
+      <?php if(isset($post['pricing_0_price'][0]) > 0){ 
+        echo '<i class="fa fa-ticket"></i>';
+        for($p=0; isset($post['pricing_'.$p.'_price'][0]); $p++){
+          echo $post['pricing_'.$p.'_price'][0].' For '.$post['pricing_'.$p.'_type'][0].'<br>';
+          }
+      }?>
+      </span>
        <div class="archiveEventFood archiveInfo"><?php if(strlen($post["event_food_choices"][0]) > 0){ echo '<i class="fa fa-spoon"></i>'.$post["event_food_choices"][0];}?></div>
     </div>
     </div>

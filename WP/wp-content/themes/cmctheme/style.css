@@ -806,7 +806,7 @@ textarea {
 }
 .imageRow {
 	width: 100%;
-	height: 300px;
+	max-height: 300px;
 	overflow: hidden;
 	justify-content: center;
 	display: flex;
@@ -1254,10 +1254,12 @@ font-size: 16px;
 }
 .lowerEvents {
 	display: flex;
+	margin-top: 50px;
 }
 .lowerEvents, .mainEvents, .upperMainEvent {
 	max-width: 1280px;
 	margin: auto;
+	margin-top: 50px;
 	    display: flex;
     justify-content: center;
 }
@@ -1339,6 +1341,7 @@ font-size: 16px;
 .moreEventsContainer {
 	display:flex;
 	width: 100%;
+	    margin-top: 50px;
 	margin-bottom: 50px;
 }
 .archiveHero {
@@ -1456,6 +1459,12 @@ font-size: 16px;
 	font-size: 18px;
 	text-align: center;
 }
+
+	.joinAction a{
+	text-decoration:none;
+	 color:inherit;
+	}
+
 .joinActionBtnContainer {
 	display: inline-block;
 	width: 100%;
@@ -1885,7 +1894,7 @@ nav .subMenu li:hover>.SuperSubMenu{
 .memberLabel{
     position: absolute;
     float: right;
-    max-width: 42px;
+    min-width: 45px;
     margin-left: 153px;
     margin-top: 225px;
 }
@@ -2084,6 +2093,16 @@ nav .subMenu li:hover>.SuperSubMenu{
 	.archiveHeroText h1 {
     font-size: 40px;
 		}
+
+				.eventInteract span{
+		display: flex;
+    	align-items: center;
+		margin: auto;
+    	justify-content: center;
+	}
+		.eventInteract .shareEventBtn{
+    	justify-content: center;
+	}
 
 	.shareEventButtons i{
 		font-size:30px;

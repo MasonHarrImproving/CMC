@@ -65,10 +65,28 @@
         <div class="partnerImageContainer">
             <?php 
         $field_groups = acf_get_field_groups();
-        //var_dump($field_groups)
         ?>
 
     <?php $fields = acf_get_fields('78'); ?>
+
+        <?php if( $fields )
+        { 
+        foreach( $fields as $field )
+        {   
+            $images = get_field($field['name']);
+                    ?>
+            <img src="<?php echo $images['url']?>">
+            <?php
+        } 
+
+        } 
+        ?>
+        </div>
+    </div>
+        <div class="partnersContainer">
+        <h1 class="partnerType">Platinum Partners</h1>
+        <div class="partnerImageContainer">
+    <?php $fields = acf_get_fields('750'); ?>
 
         <?php if( $fields )
         { 

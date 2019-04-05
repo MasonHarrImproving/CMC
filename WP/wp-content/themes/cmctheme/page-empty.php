@@ -10,8 +10,19 @@
 ?>
 
   <section class="basicTemplate">
-        <?php the_field('page_text');?>
-        <?php the_field('video');?>
+        <?php
+if( have_rows('content_box') ):
+
+    while ( have_rows('content_box') ) : the_row();
+
+        the_sub_field('content');
+
+    endwhile;
+
+else :
+endif;
+
+?>
   </section>
    
   <script>

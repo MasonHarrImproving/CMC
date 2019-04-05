@@ -102,8 +102,8 @@ echo '<div class="lowerEvents">
     ?>
   <div class="moreEventsContainer">
   <div class="moreEvents">
+                <?php echo '<a href="'.home_url().'?page_id='.'348'.'">';?>
     <?php echo the_field('more_events_button');?>
-            <?php echo '<a href="'.home_url().'?page_id='.'348'.'">';?>
   </a>
     </div>
   </div>
@@ -112,7 +112,7 @@ echo '<div class="lowerEvents">
     <div class="archiveHeroText">
     <?php the_field('archive_text_title');?>
     <p><?php the_field('archive_text_description');?></p>
-    <div><div class="archiveLink"><?php echo '<a href="'.home_url().'?page_id='.'595'.'">Go to the Archive</a>';?></div>
+    <div><div class="archiveLink"><?php echo '<a href="'.home_url().'?page_id='.'600'.'">Go to the Archive</a>';?></div>
 </div>
     </div>
     </div>
@@ -141,7 +141,7 @@ echo '<div class="lowerEvents">
     <div class="archiveHeroText">
     <?php echo the_field('action_area_title');?>
     <p><?php echo the_field('action_area_description');?></p>
-    <div class="joinActionBtnContainer"><div class="joinAction"><?php echo the_field('action_area_button');?></div>
+    <div class="joinActionBtnContainer"><div class="joinAction"><?php echo '<a href="'; the_field('action_area_link'); echo '">'; the_field('action_area_button'); echo '</a>';?></div>
 </div>
     </div>
     </div>
